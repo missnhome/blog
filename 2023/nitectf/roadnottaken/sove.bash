@@ -1,0 +1,1 @@
+wget https://play.nitectf.live/files/09e4becb6d3e05d7718438f899f32530/road_not_taken.zip?token=eyJ1c2VyX2lkIjo0ODAsInRlYW1faWQiOjI4OSwiZmlsZV9pZCI6MzR9.ZYFETA.5WJn3RVNApJza3f0Bgw75T8Q9cc

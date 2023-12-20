@@ -1,0 +1,1 @@
+wget https://thecybercoopctf.ctfd.io/files/433a330e4acc65f6ed1a0e231ca2798c/dpr.pcapng?token=eyJ1c2VyX2lkIjo5MDUsInRlYW1faWQiOjU1MSwiZmlsZV9pZCI6MjV9.ZX2kLA.xFhhS_KYMezMDrY-QoK1f19RpKs

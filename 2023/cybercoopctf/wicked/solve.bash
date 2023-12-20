@@ -1,0 +1,1 @@
+wget https://thecybercoopctf.ctfd.io/files/b0578eede27e4e11839d636c4f124086/ciphertext.txt?token=eyJ1c2VyX2lkIjo5MDUsInRlYW1faWQiOjU1MSwiZmlsZV9pZCI6MTd9.ZX3JAw.sIv3ShGRNTCjk1oBrjJL7lSb7iI

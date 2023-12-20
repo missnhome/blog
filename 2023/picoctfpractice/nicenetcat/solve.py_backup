@@ -1,0 +1,8 @@
+#nc mercury.picoctf.net 22902>flag.txt
+
+with open('flag.txt', "r") as f:
+    d=""
+    for line in f:
+        d+=chr(int(line))
+   
+    print(d)
