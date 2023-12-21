@@ -1,5 +1,0 @@
---2023-12-14 08:01:44--  https://mercury.picoctf.net/static/fb851c1858cc762bd4eed569013d7f00/flag
-Resolving mercury.picoctf.net (mercury.picoctf.net)... 18.189.209.142
-Connecting to mercury.picoctf.net (mercury.picoctf.net)|18.189.209.142|:443... connected.
-GnuTLS: The TLS connection was non-properly terminated.
-Unable to establish SSL connection.

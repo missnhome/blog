@@ -1,1 +1,0 @@
-wget https://mercury.picoctf.net/static/fdf270d959fa5231e180e2bd11421d0c/vuln.c

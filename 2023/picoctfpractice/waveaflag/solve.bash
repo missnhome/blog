@@ -1,1 +1,0 @@
-strings warm |grep 'pico' --color

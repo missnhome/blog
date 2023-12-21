@@ -1,1 +1,0 @@
-$exiftool friend.jpeg 

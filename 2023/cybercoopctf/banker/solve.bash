@@ -1,1 +1,0 @@
-wget https://thecybercoopctf.ctfd.io/files/71ed55c2d32cd7f47afafb10b964ddcc/Bunker.jar?token=eyJ1c2VyX2lkIjo5MDUsInRlYW1faWQiOjU1MSwiZmlsZV9pZCI6MTN9.ZX1SPg.5gxqx-9QIlyn8VouSB-I0odRN58

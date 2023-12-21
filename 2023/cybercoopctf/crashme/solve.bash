@@ -1,1 +1,0 @@
-wget https://thecybercoopctf.ctfd.io/files/51de2b436433e500bb48ef7948e6bd3b/crashme.c?token=eyJ1c2VyX2lkIjo5MDUsInRlYW1faWQiOjU1MSwiZmlsZV9pZCI6MjR9.ZX1lSg.5BKDlzdW_vSnR3NZe4WRg4U-W1E
