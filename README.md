@@ -1,2 +1,3 @@
 # missn.github.io
-dsds
+welcome to missn writeups see them in this page
+https://missnhome.github.io/blog/
