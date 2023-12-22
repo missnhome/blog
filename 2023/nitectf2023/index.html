@@ -6,7 +6,7 @@
     <title>MISSN</title>
     <style>
         body {
-            font-family: 'Courier New', monospace;
+            font-family: 'Courier New', monospace; 
             background-color: #1e1e1e; /* Dark background color */
             color: #ffffff; /* Light text color */
             margin: 0;
@@ -69,6 +69,23 @@
         ul.horizontal li a:hover {
             background-color: #111;
         }
+.comment-button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #3c5d6e;
+        border-radius: 6px;
+        outline: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
+    }
+
+    .comment-button:hover {
+        background-color: #c2c7c7;
+        border-color: #7aa8b7;
+    }
     </style>
 </head>
 <body>
@@ -77,6 +94,7 @@
 
     <div id="sidebar">
         <h2>Archive</h2>
+<a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
         <ul class="vertical">
             <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
         </ul>
@@ -86,6 +104,7 @@
         <h2>headings</h2>
         <ul class="horizontal">
             <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md')">erass</a></li>
+            
            
  
             <li><a href="https://github.com/missnhome/blog/blob/main/2023/nitectf2023">...</a></li>
