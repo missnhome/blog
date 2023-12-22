@@ -69,20 +69,38 @@
         ul.horizontal li a:hover {
             background-color: #111;
         }
+.comment-button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #3c5d6e;
+        border-radius: 6px;
+        outline: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
+    }
+
+    .comment-button:hover {
+        background-color: #c2c7c7;
+        border-color: #7aa8b7;
+    }
     </style>
 </head>
 <body>
 
     <h1>Missn</h1>
-      
+
     <div id="sidebar">
         <h2>Archive</h2>
+<a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
         <ul class="vertical">
-             <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
+            <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
         </ul>
     </div>
 
-    <div id="main-content"><a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
+    <div id="main-content">
         <h2>headings</h2>
         <ul class="horizontal">
             <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md')">erass</a></li>
@@ -97,7 +115,6 @@
             <!-- Writeup content goes here -->
             <p>Select a writeup from the sidebar to view its content.</p>
         </div>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
