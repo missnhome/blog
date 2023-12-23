@@ -5,87 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
     <style>
-        body {
-            font-family: 'Courier New', monospace; 
-            background-color: #1e1e1e; /* Dark background color */
-            color: #ffffff; /* Light text color */
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            color: #61dafb; /* Sky blue heading color */
-        }
-
-        a {
-            color: #00ff00; /* Green link color */
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        #sidebar {
-            float: left;
-            width: 20%;
-        }
-
-        #main-content {
-            float: left;
-            width: 80%;
-        }
-
-        #writeup-content {
-            padding: 20px;
-            background-color: #2a2a2a; /* Darker background color for writeup content */
-            border-radius: 5px;
-        }
-           ul.horizontal {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        ul.horizontal li {
-            float: left;
-        }
-
-        ul.horizontal li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        /* Change the link color to #111 (black) on hover */
-        ul.horizontal li a:hover {
-            background-color: #111;
-        }
-.comment-button {
-        display: inline-block;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #3c5d6e;
-        border-radius: 6px;
-        outline: none;
-        transition: 0.3s;
-        border: 2px solid transparent;
-    }
-
-    .comment-button:hover {
-        background-color: #c2c7c7;
-        border-color: #7aa8b7;
-    }
+       /* Your CSS styles go here */
     </style>
 </head>
 <body>
@@ -119,74 +39,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
- function loadWriteupContent(writeupUrl) {
-            fetch(writeupUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('writeup-content').innerHTML = renderMarkdown(data);
-                })
-                .catch(error => {
-                    console.error('Error fetching or parsing content:', error);
-                });
-        }
-
-        function renderMarkdown(content) {
-            // Basic Markdown rendering (line breaks and bold text)
-            return content
-                .replace(/\n/g, '<br>')
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        }
-
-        // Load the default writeup when the page initializes
-        window.onload = function () {
-            loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
-        };
-
-        // Add a new function to load links from a text file
-        function loadLinksFromTextFile(file) {
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var links = parseLinksFromText(xhr.responseText);
-                    updateSidebar(links);
-                }
-            };
-            xhr.open("GET", file, true);
-            xhr.send();
-        }
-
-        // Add a new function to parse links from the text content
-        function parseLinksFromText(text) {
-            var links = [];
-            var lines = text.split('\n');
-            for (var i = 0; i < lines.length; i++) {
-                var parts = lines[i].split(',');
-                if (parts.length === 2) {
-                    links.push({ title: parts[0].trim(), url: parts[1].trim() });
-                }
-            }
-            return links;
-        }
-
-        // Add a new function to update the sidebar with links
-        function updateSidebar(links) {
-            var archiveList = document.getElementById('archive-list');
-            archiveList.innerHTML = ''; // Clear existing content
-
-            for (var i = 0; i < links.length; i++) {
-                var listItem = document.createElement('li');
-                var link = document.createElement('a');
-                link.href = links[i].url;
-                link.textContent = links[i].title;
-                listItem.appendChild(link);
-                archiveList.appendChild(listItem);
-            }
-        }
+        // Your existing JavaScript functions go here
 
         // Add a new function to filter writeup links based on the search query
         function filterWriteups() {
@@ -208,7 +61,70 @@
             // Update the heading with search results count
             searchResultsHeading.textContent = 'Search Results (' + resultsCount + ')';
         }
-    </script>
 
+        function loadWriteupContent(writeupUrl) {
+            fetch(writeupUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('writeup-content').innerHTML = renderMarkdown(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching or parsing content:', error);
+                });
+        }
+
+        function renderMarkdown(content) {
+            return content
+                .replace(/\n/g, '<br>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        }
+
+        function loadLinksFromTextFile(file) {
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var links = parseLinksFromText(xhr.responseText);
+                    updateSidebar(links);
+                }
+            };
+            xhr.open("GET", file, true);
+            xhr.send();
+        }
+
+        function parseLinksFromText(text) {
+            var links = [];
+            var lines = text.split('\n');
+            for (var i = 0; i < lines.length; i++) {
+                var parts = lines[i].split(',');
+                if (parts.length === 2) {
+                    links.push({ title: parts[0].trim(), url: parts[1].trim() });
+                }
+            }
+            return links;
+        }
+
+        function updateSidebar(links) {
+            var archiveList = document.getElementById('archive-list');
+            archiveList.innerHTML = ''; // Clear existing content
+
+            for (var i = 0; i < links.length; i++) {
+                var listItem = document.createElement('li');
+                var link = document.createElement('a');
+                link.href = links[i].url;
+                link.textContent = links[i].title;
+                link.classList.add('writeup-link'); // Add the 'writeup-link' class
+                listItem.appendChild(link);
+                archiveList.appendChild(listItem);
+            }
+
+            // After updating the sidebar, trigger the filterWriteups function
+            filterWriteups();
+        }
+    </script>
 </body>
 </html>
