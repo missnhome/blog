@@ -119,33 +119,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
- function loadWriteupContent(writeupUrl) {
-            fetch(writeupUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    document.getElementById('writeup-content').innerHTML = renderMarkdown(data);
-                })
-                .catch(error => {
-                    console.error('Error fetching or parsing content:', error);
-                });
-        }
-
-        function renderMarkdown(content) {
-            // Basic Markdown rendering (line breaks and bold text)
-            return content
-                .replace(/\n/g, '<br>')
-                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-        }
-
-        // Load the default writeup when the page initializes
-        window.onload = function () {
-            loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
-        };
+        // Your existing JavaScript functions go here
 
         // Add a new function to filter writeup links based on the search query
         function filterWriteups() {
@@ -156,7 +130,7 @@
 
             for (var i = 0; i < links.length; i++) {
                 var title = links[i].textContent.toLowerCase();
-                var content = links[i].dataset.content.toLowerCase(); // Add dataset for content
+                var content = links[i].dataset.content.toLowerCase();
 
                 if (title.includes(query) || content.includes(query)) {
                     links[i].parentElement.style.display = '';
@@ -170,7 +144,7 @@
             searchResultsHeading.textContent = 'Search Results (' + resultsCount + ')';
         }
 
-        function loadWriteupContent(writeupUrl) {
+        function loadWriteupContent(writeupUrl, title) {
             fetch(writeupUrl)
                 .then(response => {
                     if (!response.ok) {
@@ -235,6 +209,12 @@
                 // Add the link to both archive and headings
                 archiveList.appendChild(listItem.cloneNode(true));
                 writeupList.appendChild(listItem);
+
+                // Load writeup content on click
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    loadWriteupContent(this.href, this.textContent);
+                });
             }
 
             // After updating the sidebar, trigger the filterWriteups function
