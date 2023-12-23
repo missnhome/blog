@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISSN</title>
+    <style>
+         body {
+            font-family: 'Courier New', monospace; 
+            background-color: #1e1e1e; /* Dark background color */
+            color: #ffffff; /* Light text color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #61dafb; /* Sky blue heading color */
+        }
+
+        a {
+            color: #00ff00; /* Green link color */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #sidebar {
+            float: left;
+            width: 20%;
+        }
+
+        #main-content {
+            float: left;
+            width: 80%;
+        }
+
+        #writeup-content {
+            padding: 20px;
+            background-color: #2a2a2a; /* Darker background color for writeup content */
+            border-radius: 5px;
+        }
+           ul.horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul.horizontal li {
+            float: left;
+        }
+
+        ul.horizontal li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        ul.horizontal li a:hover {
+            background-color: #111;
+        }
+.comment-button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #3c5d6e;
+        border-radius: 6px;
+        outline: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
+    }
+
+    .comment-button:hover {
+        background-color: #c2c7c7;
+        border-color: #7aa8b7;
+    }
+     
+    </style>
+</head>
+<body>
+
+    <h1>Missn</h1>
+
+    <!-- Add a search box -->
+    <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
+
+    <div id="sidebar">
+        <h2>Archive</h2>
+        <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
+        <ul class="vertical">
+            <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
+            <li><a href="https://missnhome.github.io/blog/2023/picopractice">picopractice</a></li>
+        </ul>
+    </div>
+
+    <div id="main-content">
+        <h2>headings</h2>
+        <ul class="horizontal" id="writeup-list">
+            <!-- Writeup links will be added here by JavaScript -->
+        </ul>
+        <div id="writeup-content">
+            <!-- Writeup content goes here -->
+            <p>Select a writeup from the sidebar to view its content.</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        // Your existing JavaScript functions go here
+
+        // Add a new function to fetch and display writeup links
+        function loadWriteupLinks() {
+            fetch('links.txt')
+                .then(response => response.text())
+                .then(data => {
+                    var links = data.split('\n');
+                    var list = document.getElementById('writeup-list');
+                    links.forEach(link => {
+                        var li = document.createElement('li');
+                        var a = document.createElement('a');
+                        a.href = link;
+                        a.textContent = link;
+                        a.className = 'writeup-link';
+                        li.appendChild(a);
+                        list.appendChild(li);
+                    });
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Add a new function to filter writeup links based on the search query
+        function filterWriteups() {
+            var query = document.getElementById('search-box').value.toLowerCase();
+            var links = document.getElementsByClassName('writeup-link');
+            for (var i = 0; i < links.length; i++) {
+                var title = links[i].textContent.toLowerCase();
+                if (title.includes(query)) {
+                    links[i].parentElement.style.display = '';
+                } else {
+                    links[i].parentElement.style.display = 'none';
+                }
+            }
+        }
+
+        // Load the writeup links when the page initializes
+        window.onload = function () {
+            loadWriteupLinks();
+        };
+    </script>
+
+</body>
+</html>
