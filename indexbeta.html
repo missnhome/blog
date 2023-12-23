@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
     <style>
- body {
+        body {
             font-family: 'Courier New', monospace; 
             background-color: #1e1e1e; /* Dark background color */
             color: #ffffff; /* Light text color */
@@ -85,7 +85,8 @@
     .comment-button:hover {
         background-color: #c2c7c7;
         border-color: #7aa8b7;
-    }    </style>
+    }
+    </style>
 </head>
 <body>
 
@@ -106,7 +107,7 @@
     </div>
 
     <div id="main-content">
-        <h2>headings</h2>
+        <h2 id="search-results-heading">headings</h2>
         <ul class="horizontal" id="writeup-list">
             <!-- Writeup links will be dynamically added here -->
         </ul>
@@ -145,6 +146,7 @@
         window.onload = function () {
             loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
         };
+
         // Add a new function to load links from a text file
         function loadLinksFromTextFile(file) {
             var xhr = new XMLHttpRequest();
@@ -190,14 +192,21 @@
         function filterWriteups() {
             var query = document.getElementById('search-box').value.toLowerCase();
             var links = document.getElementsByClassName('writeup-link');
+            var searchResultsHeading = document.getElementById('search-results-heading');
+            var resultsCount = 0;
+
             for (var i = 0; i < links.length; i++) {
                 var title = links[i].textContent.toLowerCase();
                 if (title.includes(query)) {
                     links[i].parentElement.style.display = '';
+                    resultsCount++;
                 } else {
                     links[i].parentElement.style.display = 'none';
                 }
             }
+
+            // Update the heading with search results count
+            searchResultsHeading.textContent = 'Search Results (' + resultsCount + ')';
         }
     </script>
 
