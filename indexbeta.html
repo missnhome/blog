@@ -76,7 +76,18 @@
                 })
                 .catch(error => console.error('Error:', error));
         }
-
+   function filterWriteups() {
+            var query = document.getElementById('search-box').value.toLowerCase();
+            var links = document.getElementsByClassName('writeup-link');
+            for (var i = 0; i < links.length; i++) {
+                var title = links[i].textContent.toLowerCase();
+                if (title.includes(query)) {
+                    links[i].parentElement.style.display = '';
+                } else {
+                    links[i].parentElement.style.display = 'none';
+                }
+            }
+        }
         // Load the archive links when the page initializes
         window.onload = function () {
             loadArchiveLinks();
