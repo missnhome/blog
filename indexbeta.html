@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
     <style>
-       /* Your  CSS styles go here */
+       /* Your CSS styles go here */
     </style>
 </head>
 <body>
 
     <h1>Missn</h1>
 
-    <!-- Add a search box  -->
+    <!-- Add a search box -->
     <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
 
     <div id="sidebar">
@@ -34,13 +34,16 @@
             fetch('links.txt')
                 .then(response => response.text())
                 .then(data => {
-                    var links = data.split('\n');
+                    var lines = data.split('\n');
                     var list = document.getElementById('archive-list');
-                    links.forEach(link => {
+                    lines.forEach(line => {
+                        var parts = line.split(' ');
+                        var title = parts[0];
+                        var link = parts[1];
                         var li = document.createElement('li');
                         var a = document.createElement('a');
                         a.href = link;
-                        a.textContent = link;
+                        a.textContent = title;
                         li.appendChild(a);
                         list.appendChild(li);
                     });
