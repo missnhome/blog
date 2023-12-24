@@ -91,11 +91,8 @@
 <body>
 
     <h1>Missn</h1>
-
-    <!-- Add a search box -->
     <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
     
-    <!-- Add a button to load links from a file -->
     <button onclick="loadLinksFromTextFile('links.txt')">Load Links</button>
 
     <div id="sidebar">
@@ -109,11 +106,7 @@
     <div id="main-content">
         <h2 id="search-results-heading">Headings</h2>
         <ul class="horizontal" id="writeup-list">
-             <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md')">erass</a></li>
-            
-           
- 
-            <li><a href="https://github.com/missnhome/blog/blob/main/2023/nitectf2023">...</a></li>
+            <!-- Writeup links will be dynamically added here -->
         </ul>
         <div id="writeup-content">
             <!-- Writeup content goes here -->
@@ -123,9 +116,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        // Your existing JavaScript functions go here
-
-        // Add a new function to filter writeup links based on the search query
         function filterWriteups() {
             var query = document.getElementById('search-box').value.toLowerCase();
             var links = document.getElementsByClassName('writeup-link');
@@ -134,21 +124,20 @@
 
             for (var i = 0; i < links.length; i++) {
                 var title = links[i].textContent.toLowerCase();
-                var content = links[i].dataset.content.toLowerCase(); // Add dataset for content
+                var link = links[i].href.toLowerCase();
+                var content = links[i].dataset.content.toLowerCase();
 
-                if (title.includes(query) || content.includes(query)) {
+                if (title.includes(query) || link.includes(query) || content.includes(query)) {
                     links[i].parentElement.style.display = '';
                     resultsCount++;
                 } else {
                     links[i].parentElement.style.display = 'none';
                 }
             }
-
-            // Update the heading with search results count
             searchResultsHeading.textContent = 'Search Results (' + resultsCount + ')';
         }
 
-        function loadWriteupContent(writeupUrl) {
+        function loadWriteupContent(writeupUrl, title) {
             fetch(writeupUrl)
                 .then(response => {
                     if (!response.ok) {
@@ -171,15 +160,20 @@
         }
 
         function loadLinksFromTextFile(file) {
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    var links = parseLinksFromText(xhr.responseText);
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch ${file}. Status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    var links = parseLinksFromText(data);
                     updateSidebar(links);
-                }
-            };
-            xhr.open("GET", file, true);
-            xhr.send();
+                })
+                .catch(error => {
+                    console.error('Error loading links:', error);
+                });
         }
 
         function parseLinksFromText(text) {
@@ -202,23 +196,33 @@
             writeupList.innerHTML = ''; // Clear existing content
 
             for (var i = 0; i < links.length; i++) {
-                var listItem = document.createElement('li');
+                // Add the link to the archive
+                var archiveItem = document.createElement('li');
+                archiveItem.textContent = links[i].title;
+                archiveList.appendChild(archiveItem);
+
+                // Add the link to the headings
+                var writeupItem = document.createElement('li');
                 var link = document.createElement('a');
                 link.href = links[i].url;
                 link.textContent = links[i].title;
                 link.classList.add('writeup-link'); // Add the 'writeup-link' class
                 link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
-                listItem.appendChild(link);
+                writeupItem.appendChild(link);
+                writeupList.appendChild(writeupItem);
 
-                // Add the link to both archive and headings
-                archiveList.appendChild(listItem.cloneNode(true));
-                writeupList.appendChild(listItem);
+                // Load writeup content on click
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    loadWriteupContent(this.href, this.textContent);
+                });
             }
 
             // After updating the sidebar, trigger the filterWriteups function
             filterWriteups();
         }
-  window.onload = function () {
+
+        window.onload = function () {
             loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
         };
     </script>
