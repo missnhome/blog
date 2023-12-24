@@ -28,7 +28,33 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         // Your existing JavaScript functions go here
+ function loadWriteupContent(writeupUrl) {
+            fetch(writeupUrl)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById('writeup-content').innerHTML = renderMarkdown(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching or parsing content:', error);
+                });
+        }
 
+        function renderMarkdown(content) {
+            // Basic Markdown rendering (line breaks and bold text)
+            return content
+                .replace(/\n/g, '<br>')
+                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        }
+
+        // Load the default writeup when the page initializes
+        window.onload = function () {
+            loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
+        };
         // Add a new function to fetch and display archive links
         function loadArchiveLinks() {
             fetch('links.txt')
