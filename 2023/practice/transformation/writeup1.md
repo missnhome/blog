@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <h1>picopractice(2021)- Python  Wrangling Challenge Writeup</h1>
+    <h1>picopractice(2021)- transformation Challenge Writeup</h1>
 
     <h2>Challenge Description</h2>
     <p>Python scripts are invoked kind of like programs in the Terminal... Can you run this Python script using this password to get the flag?
@@ -30,7 +30,7 @@
     <h2>Solution Approach</h2>
     <p>Here are the steps we took to solve the challenge:</p>
     <ol>
-        <li>i save links...</li>
+        <li>i save links </li>
         <li>analysis python scripts and decide use this command </li>
            <li> python ende.py -d flag.txt.en ask for password get it from pw.txt then show me flag after it</li      
              <li>or on base of this code  if sys.argv[1] == "-e":
