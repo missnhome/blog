@@ -133,10 +133,10 @@
             var resultsCount = 0;
 
             for (var i = 0; i < links.length; i++) {
-                var title = links[i].textContent.toLowerCase()
+                var title = links[i].textContent.toLowerCase()l
                 var content = links[i].dataset.content.toLowerCase(); // Add dataset for content
 
-                if (title.includes(query.toLowerCase()) || content.includes(query).toLowerCase()) {
+                if (title.includes(query) || content.includes(query)) {
                     links[i].parentElement.style.display = '';
                     resultsCount++;
                 } else {
@@ -213,8 +213,8 @@
                 listItem.appendChild(link);
 
                 // Add the link to both archive and headings
-                archiveList.appendChild(listItem.cloneNode(true));
-                writeupList.appendChild(listItem);
+                archiveList.appendChild(listItem.cloneNode(true).slice(0,10));
+                writeupList.appendChild(listItem.slice(0,10));
             }
 
             // After updating the sidebar, trigger the filterWriteups function
