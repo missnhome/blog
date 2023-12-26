@@ -1,2 +1,2 @@
 Nitectf2023, https://missnhome.github.io/blog/2023/nitectf2023
-Picopractice, https://missnhome.github.io/blog/2023/picopractice
+Picopractice, https://missnhome.github.io/blog/2023/practice
