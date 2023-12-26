@@ -133,7 +133,7 @@
             var resultsCount = 0;
 
             for (var i = 0; i < links.length; i++) {
-                var title = links[i].textContent.toLowerCase()
+                var title = links[i].textContent.toLowerCase().slice(0,10)
                 var content = links[i].dataset.content.toLowerCase(); // Add dataset for content
 
                 if (title.includes(query) || content.includes(query)) {
@@ -208,7 +208,7 @@
                  var listItem2 = document.createElement('li');
                 var link = document.createElement('a');
                 link.href = links[i].url;
-                link.textContent = links[i].title.slice(0,10);
+                link.textContent = links[i].title
                 link.classList.add('writeup-link'); // Add the 'writeup-link' class
                 link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
                 listItem.appendChild(link);
