@@ -1,2 +1,3 @@
 Nitectf2023, https://missnhome.github.io/blog/2023/nitectf2023
-Picopractice, https://missnhome.github.io/blog/2023/practice
+practice, https://missnhome.github.io/blog/2023/practice
+erass nitectf2023 using cat and wget in linux,https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md    

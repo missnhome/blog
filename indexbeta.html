@@ -96,7 +96,7 @@
     <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
     
     <!-- Add a button to load links from a file -->
-    <button onclick="loadLinksFromTextFile('links.txt')">Load Links</button>
+    <button onclick="loadLinksFromTextFile('links.txt')">search</button>
 
     <div id="sidebar">
         <h2>Archive</h2>
@@ -145,7 +145,7 @@
             }
 
     // Update the heading with search results count
-            searchResultsHeading.textContent = 'Search Results (' + resultsCount + ')';
+            searchResultsHeading.textContent = 'Search Results (' + resultsCount/2 + ')';
         }
 
              
@@ -190,7 +190,7 @@
             for (var i = 0; i < lines.length; i++) {
                 var parts = lines[i].split(',');
                 if (parts.length === 2) {
-                    links.push({ title: parts[0].trim(), url: parts[1].trim() });
+                    links.push({ title: parts[0].trim().slice(0, 7), url: parts[1].trim() });
                 }
             }
             return links;
