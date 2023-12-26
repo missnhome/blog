@@ -205,9 +205,10 @@
 
             for (var i = 0; i < links.length; i++) {
                 var listItem = document.createElement('li');
+                 var listItem2 = document.createElement('li');
                 var link = document.createElement('a');
                 link.href = links[i].url;
-                link.textContent = links[i].title;
+                link.textContent = links[i].title.slice(0,10);
                 link.classList.add('writeup-link'); // Add the 'writeup-link' class
                 link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
                 listItem.appendChild(link);
