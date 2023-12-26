@@ -133,7 +133,7 @@
             var resultsCount = 0;
 
             for (var i = 0; i < links.length; i++) {
-                var title = links[i].textContent.toLowerCase();
+                var title = links[i].textContent.toLowerCase().slice(0,10);
                 var content = links[i].dataset.content.toLowerCase(); // Add dataset for content
 
                 if (title.includes(query) || content.includes(query)) {
@@ -190,7 +190,7 @@
             for (var i = 0; i < lines.length; i++) {
                 var parts = lines[i].split(',');
                 if (parts.length === 2) {
-                    links.push({ title: parts[0].trim().slice(0, 7), url: parts[1].trim() });
+                    links.push({ title: parts[0].trim(), url: parts[1].trim() });
                 }
             }
             return links;
