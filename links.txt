@@ -2,7 +2,7 @@ Nitectf2023, https://missnhome.github.io/blog/2023/nitectf2023
 practice in picoctf and others, https://missnhome.github.io/blog/2023/practice
 erass nitectf2023 using cat and wget in linux,https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md    
 obediant cat  in linux, https://missnhome.github.io/blog/2023/practice/obediantcat/writeup1.md
-nice netcat netcat in linux, https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md
+nice netcat netcat in linux , https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md
 mod 26 rot 13 with python, https://missnhome.github.io/blog/2023/practice/obediantcat/writeup1.md
 information  sample base64 with exiftool and forensics, https://missnhome.github.io/blog/2023/practice/information/writeup1.md
 python wrangling  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/PythonWrangling/writeup1.md
