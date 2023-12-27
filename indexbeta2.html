@@ -4,8 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
-    <style>
-       /* Your CSS styles go here */
+        <style>
+         body {
+            font-family: 'Courier New', monospace; 
+            background-color: #1e1e1e; /* Dark background color */
+            color: #ffffff; /* Light text color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #61dafb; /* Sky blue heading color */
+        }
+
+        a {
+            color: #00ff00; /* Green link color */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #sidebar {
+            float: left;
+            width: 20%;
+        }
+
+        #main-content {
+            float: left;
+            width: 80%;
+        }
+
+        #writeup-content {
+            padding: 20px;
+            background-color: #2a2a2a; /* Darker background color for writeup content */
+            border-radius: 5px;
+        }
+           ul.horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul.horizontal li {
+            float: left;
+        }
+
+        ul.horizontal li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        ul.horizontal li a:hover {
+            background-color: #111;
+        }
+.comment-button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #3c5d6e;
+        border-radius: 6px;
+        outline: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
+    }
+
+    .comment-button:hover {
+        background-color: #c2c7c7;
+        border-color: #7aa8b7;
+    }
     </style>
 </head>
 <body>
