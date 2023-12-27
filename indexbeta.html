@@ -134,6 +134,8 @@
 
             for (var i = 0; i < links.length; i++) {
                 var title = links[i].textContent.toLowerCase()//in search
+                var title2 =  title
+
                 var content = links[i].dataset.content.toLowerCase(); // Add dataset for content
 
                 if (title.includes(query) || content.includes(query)) {
@@ -213,10 +215,11 @@
                 link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
                 var link2 = document.createElement('a');
                 link2.href = links[i].url;
-                link2.textContent = links[i].title
+                link2.textContent = links[i].title2.slice(0,20)
                 link2.classList.add('writeup-link'); // Add the 'writeup-link' class
                 link2.dataset.content = ''; // Placeholder for content, update this dynamically if needed
-                listItem2.appendChild(link2);
+                for x in    link2: 
+                   listItem2.appendChild(x);
               
                 // Add the link to both archive and headings
                 archiveList.appendChild(listItem.cloneNode(true));
