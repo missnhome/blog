@@ -1,478 +1,229 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>MISSN</title>
-
     <style>
-
          body {
-
             font-family: 'Courier New', monospace; 
-
             background-color: #1e1e1e; /* Dark background color */
-
             color: #ffffff; /* Light text color */
-
             margin: 0;
-
             padding: 20px;
-
         }
-
-
 
         h1, h2, h3 {
-
             color: #61dafb; /* Sky blue heading color */
-
         }
-
-
 
         a {
-
             color: #00ff00; /* Green link color */
-
         }
-
-
 
         ul {
-
             list-style-type: none;
-
             padding: 0;
-
         }
-
-
 
         li {
-
             margin-bottom: 10px;
-
         }
-
-
 
         #sidebar {
-
             float: left;
-
             width: 20%;
-
         }
-
-
 
         #main-content {
-
             float: left;
-
             width: 80%;
-
         }
-
-
 
         #writeup-content {
-
             padding: 20px;
-
             background-color: #2a2a2a; /* Darker background color for writeup content */
-
             border-radius: 5px;
-
         }
-
            ul.horizontal {
-
             list-style-type: none;
-
             margin: 0;
-
             padding: 0;
-
             overflow: hidden;
-
             background-color: #333;
-
         }
-
-
 
         ul.horizontal li {
-
             float: left;
-
         }
-
-
 
         ul.horizontal li a {
-
             display: block;
-
             color: white;
-
             text-align: center;
-
             padding: 14px 16px;
-
             text-decoration: none;
-
         }
-
-
 
         /* Change the link color to #111 (black) on hover */
-
         ul.horizontal li a:hover {
-
             background-color: #111;
-
         }
-
 .comment-button {
-
         display: inline-block;
-
         padding: 10px 20px;
-
         text-align: center;
-
         text-decoration: none;
-
         color: #ffffff;
-
         background-color: #3c5d6e;
-
         border-radius: 6px;
-
         outline: none;
-
         transition: 0.3s;
-
         border: 2px solid transparent;
-
     }
-
-
 
     .comment-button:hover {
-
         background-color: #c2c7c7;
-
         border-color: #7aa8b7;
-
     }
-
     </style>
-
 </head>
-
 <body>
 
-
-
     <h1>Missn</h1>
-
-
-
-    <!-- Add a search box -->
-
     <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
-
     
-
-    <!-- Add a button to load links from a file -->
-
-    <button onclick="loadLinksFromTextFile('links.txt')">search</button>
-
-
+    <button onclick="loadLinksFromTextFile('links.txt')">Load Links</button>
 
     <div id="sidebar">
-
         <h2>Archive</h2>
-
         <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
-
         <ul class="vertical" id="archive-list">
-
             <!-- Archive links will be dynamically added here -->
-
         </ul>
-
     </div>
-
-
 
     <div id="main-content">
-
         <h2 id="search-results-heading">Headings</h2>
-
         <ul class="horizontal" id="writeup-list">
-
-             <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md')">erass</a></li>
-
-            
-
-           
-
- 
-
-            <li><a href="https://github.com/missnhome/blog/blob/main/2023/nitectf2023">...</a></li>
-
+            <!-- Writeup links will be dynamically added here -->
         </ul>
-
         <div id="writeup-content">
-
             <!-- Writeup content goes here -->
-
             <p>Select a writeup from the sidebar to view its content.</p>
-
         </div>
-
     </div>
 
-
-
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
     <script>
-
-        // Your existing JavaScript functions go here
-
-const title2 = [];
-
-
-
-        // Add a new function to filter writeup links based on the search query
-
         function filterWriteups() {
-
             var query = document.getElementById('search-box').value.toLowerCase();
-
-            var links = document.getElementsByClassName('archive-list');
-
+            var links = document.getElementsByClassName('writeup-link');
             var searchResultsHeading = document.getElementById('search-results-heading');
-
             var resultsCount = 0;
 
-
-
             for (var i = 0; i < links.length; i++) {
-
-                var title = links[i].textContent.toLowerCase()//in search
-
-                  title2[i] =  title.slice(0,20)
-
-
-
-                var content = links[i].dataset.content.toLowerCase(); // Add dataset for content
-
-
+                var title = links[i].textContent.toLowerCase();
+                var content = links[i].dataset.content.toLowerCase();
 
                 if (title.includes(query) || content.includes(query)) {
-
                     links[i].parentElement.style.display = '';
-
                     resultsCount++;
-
                 } else {
-
                     links[i].parentElement.style.display = 'none';
-
                 }
-
             }
-
-
-
-    // Update the heading with search results count
-
             searchResultsHeading.textContent = 'Search Results (' + resultsCount + ')';
-
         }
 
-
-
-             
-
-
-
-        function loadWriteupContent(writeupUrl) {
-
+        function loadWriteupContent(writeupUrl, title) {
             fetch(writeupUrl)
-
                 .then(response => {
-
                     if (!response.ok) {
-
                         throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
-
                     }
-
                     return response.text();
-
                 })
-
                 .then(data => {
-
                     document.getElementById('writeup-content').innerHTML = renderMarkdown(data);
-
                 })
-
                 .catch(error => {
-
                     console.error('Error fetching or parsing content:', error);
-
                 });
-
         }
-
-
 
         function renderMarkdown(content) {
-
             return content
-
                 .replace(/\n/g, '<br>')
-
                 .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-
         }
-
-
 
         function loadLinksFromTextFile(file) {
-
-            var xhr = new XMLHttpRequest();
-
-            xhr.onreadystatechange = function() {
-
-                if (xhr.readyState === 4 && xhr.status === 200) {
-
-                    var links = parseLinksFromText(xhr.responseText);
-
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch ${file}. Status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    var links = parseLinksFromText(data);
                     updateSidebar(links);
-
-                }
-
-            };
-
-            xhr.open("GET", file, true);
-
-            xhr.send();
-
+                })
+                .catch(error => {
+                    console.error('Error loading links:', error);
+                });
         }
-
-
 
         function parseLinksFromText(text) {
-
             var links = [];
-
             var lines = text.split('\n');
-
             for (var i = 0; i < lines.length; i++) {
-
                 var parts = lines[i].split(',');
-
                 if (parts.length === 2) {
-
                     links.push({ title: parts[0].trim(), url: parts[1].trim() });
-
                 }
-
             }
-
             return links;
-
         }
-
-
 
         function updateSidebar(links) {
-
             var archiveList = document.getElementById('archive-list');
-
             var writeupList = document.getElementById('writeup-list');
-
             
-
             archiveList.innerHTML = ''; // Clear existing content
-
             writeupList.innerHTML = ''; // Clear existing content
 
-
-
             for (var i = 0; i < links.length; i++) {
+                // Add the link to the archive
+                var archiveItem = document.createElement('li');
+                archiveItem.textContent = links[i].title;
+                archiveList.appendChild(archiveItem);
 
-                var listItem = document.createElement('li');
-
-                 var listItem2 = document.createElement('li');
-
+                // Add the link to the headings
+                var writeupItem = document.createElement('li');
                 var link = document.createElement('a');
-
                 link.href = links[i].url;
-
-                link.textContent = links[i].title
-
+                link.textContent = links[i].title;
                 link.classList.add('writeup-link'); // Add the 'writeup-link' class
-
                 link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
+                writeupItem.appendChild(link);
+                writeupList.appendChild(writeupItem);
 
-               // Placeholder for content, update this dynamically if needed
-
-                
-
-                         var link2 = document.createElement('a');
-
-                link2.href = links[i].url;
-
-                link2.textContent = links[i].title
-
-                link2.classList.add('writeup-link'); // Add the 'writeup-link' class
-
-                link2.dataset.content = ''; 
-
-
-                     
-
-}
-
-                // Add the link to both archive and headings
-
-                archiveList.appendChild(listItem.cloneNode(true));
-
-                writeupList.appendChild(listItem2.cloneNode(true));
-
-          
-
-
+                // Load writeup content on click
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    loadWriteupContent(this.href, this.textContent);
+                });
+            }
 
             // After updating the sidebar, trigger the filterWriteups function
-
             filterWriteups();
-
         }
 
-  window.onload = function () {
-
+        window.onload = function () {
             loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
-
         };
-
     </script>
-
 </body>
-
 </html>
