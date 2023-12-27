@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
-        <style>
+    <style>
          body {
             font-family: 'Courier New', monospace; 
             background-color: #1e1e1e; /* Dark background color */
@@ -206,6 +206,7 @@
                 var link = document.createElement('a');
                 link.href = links[i].url;
                 link.textContent = links[i].title.substring(0, 10); // Display only the first 10 characters
+                link.title = links[i].title; // Store the full title as a title attribute
                 link.classList.add('writeup-link'); // Add the 'writeup-link' class
                 link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
                 writeupItem.appendChild(link);
@@ -214,7 +215,7 @@
                 // Load writeup content on click
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
-                    loadWriteupContent(this.href, this.textContent);
+                    loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
                 });
             }
 
