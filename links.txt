@@ -5,7 +5,7 @@ obediant cat  in linux, https://missnhome.github.io/blog/2023/practice/obediantc
 nice netcat netcat in linux, https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md
 mod 26 rot 13 with python, https://missnhome.github.io/blog/2023/practice/obediantcat/writeup1.md
 information  sample base64 with exiftool and forensics, https://missnhome.github.io/blog/2023/practice/information/writeup1.md
-python wrangling  reverse and decode in python, https://missnhome.github.io/blog/2023/practice/PythonWrangling/writeup1.md
+python wrangling  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/PythonWrangling/writeup1.md
 wave a aflag , https://missnhome.github.io/blog/2023/practice/waveaflag/writeup1.md
 
 
