@@ -83,7 +83,7 @@
     <h1>Missn</h1>
     <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
     
-    <button onclick="loadLinksFromTextFile('links.txt')">search</button>
+    <button onclick="loadLinksFromTextFile('links.txt')">Load Links</button>
 
     <div id="main-content">
         <h2 id="search-results-heading">Headings</h2>
@@ -96,7 +96,6 @@
         </div>
     </div>
 
-   
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         function filterWriteups() {
@@ -153,7 +152,9 @@
                 })
                 .then(data => {
                     var links = parseLinksFromText(data);
-                    updateSidebar(links);
+                    // Filter links based on the starting keyword (e.g., 'practice')
+                    var filteredLinks = links.filter(link => link.title.toLowerCase().startsWith('practice'));
+                    updateSidebar(filteredLinks);
                 })
                 .catch(error => {
                     console.error('Error loading links:', error);
@@ -173,18 +174,11 @@
         }
 
         function updateSidebar(links) {
-            var archiveList = document.getElementById('archive-list');
             var writeupList = document.getElementById('writeup-list');
             
-            archiveList.innerHTML = ''; // Clear existing content
             writeupList.innerHTML = ''; // Clear existing content
 
             for (var i = 0; i < links.length; i++) {
-                // Add the link to the archive
-                var archiveItem = document.createElement('li');
-                archiveItem.textContent = links[i].title;
-                archiveList.appendChild(archiveItem);
-
                 // Add the link to the headings
                 var writeupItem = document.createElement('li');
                 var link = document.createElement('a');
@@ -208,7 +202,9 @@
         }
 
         window.onload = function () {
-            loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
+            // Load links with the starting keyword 'practice'
+            loadLinksFromTextFile('links.txt');
         };
+    </script>
 </body>
 </html>
