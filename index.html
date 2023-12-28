@@ -170,7 +170,8 @@
                     links[i].parentElement.style.display = 'none';
                 }
             }
-            searchResultsHeading.textContent = 'Headings';
+            searchResultsHeading.textContent = '';
+            loadWriteupContent(  links[0].href.toLowerCase())
         }
 
         function loadWriteupContent(writeupUrl, title) {
