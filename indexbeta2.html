@@ -124,10 +124,11 @@
 
             for (var i = 0; i < links.length; i++) {
                 var title = links[i].textContent.toLowerCase();
+                var truncatedTitle = links[i].title.toLowerCase();
                 var link = links[i].href.toLowerCase();
                 var content = links[i].dataset.content.toLowerCase();
 
-                if (title.includes(query) || link.includes(query) || content.includes(query)) {
+                if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
                     links[i].parentElement.style.display = '';
                     resultsCount++;
                 } else {
