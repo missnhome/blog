@@ -5,87 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
     <style>
-         body {
-            font-family: 'Courier New', monospace; 
-            background-color: #1e1e1e; /* Dark background color */
-            color: #ffffff; /* Light text color */
+        body {
+            font-family: 'Arial', sans-serif;
             margin: 0;
-            padding: 20px;
-        }
-
-        h1, h2, h3 {
-            color: #61dafb; /* Sky blue heading color */
-        }
-
-        a {
-            color: #00ff00; /* Green link color */
-        }
-
-        ul {
-            list-style-type: none;
             padding: 0;
+            background-color: #f5f5f5;
         }
 
-        li {
-            margin-bottom: 10px;
-        }
-
-        #sidebar {
-            float: left;
-            width: 20%;
+        h1 {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 0;
         }
 
         #main-content {
-            float: left;
-            width: 80%;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        #sidebar {
+            flex: 1;
+            max-width: 300px;
+            background-color: #ddd;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        #archive-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #archive-list li {
+            margin-bottom: 5px;
+        }
+
+        #writeup-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #writeup-list li {
+            margin-bottom: 5px;
+        }
+
+        #search-results-heading {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        #search-box {
+            margin-bottom: 10px;
+            padding: 5px;
         }
 
         #writeup-content {
-            padding: 20px;
-            background-color: #2a2a2a; /* Darker background color for writeup content */
-            border-radius: 5px;
-        }
-           ul.horizontal {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
+            margin-top: 10px;
         }
 
-        ul.horizontal li {
-            float: left;
-        }
+        @media only screen and (max-width: 600px) {
+            #main-content {
+                margin: 5px;
+            }
 
-        ul.horizontal li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
+            #sidebar {
+                max-width: 100%;
+            }
         }
-
-        /* Change the link color to #111 (black) on hover */
-        ul.horizontal li a:hover {
-            background-color: #111;
-        }
-.comment-button {
-        display: inline-block;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #3c5d6e;
-        border-radius: 6px;
-        outline: none;
-        transition: 0.3s;
-        border: 2px solid transparent;
-    }
-
-    .comment-button:hover {
-        background-color: #c2c7c7;
-        border-color: #7aa8b7;
-    }
     </style>
 </head>
 <body>
@@ -95,30 +85,10 @@
     
     <button onclick="loadLinksFromTextFile('links.txt')">search</button>
 
-    <div id="sidebar">
-        <h2>Archive</h2>
-        <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
-                <ul class="vertical" id="archive-list" hidden>     
- </ul> 
-        <ul class="vertical" id="archive-list1">
- <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
-                         <li><a href="https://missnhome.github.io/blog/2023/practice">practice</a></li>
-        </ul>
-    </div>
-
     <div id="main-content">
         <h2 id="search-results-heading">Headings</h2>
         <ul class="horizontal" id="writeup-list">
-                                   <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md')">erass</a></li>
-                                              <li><a href="https://github.com/missnhome/blog/blob/main/2023/nitectf2023">...</a></li>
-
-             <div id="writeup-content">
-                       <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md')">erass</a></li>
-
-            <p>Select a writeup from the sidebar to view its content.</p>
-        </div>
- 
-
+            <!-- Writeup links will be dynamically added here -->
         </ul>
         <div id="writeup-content">
             <!-- Writeup content goes here -->
@@ -126,6 +96,7 @@
         </div>
     </div>
 
+   
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         function filterWriteups() {
@@ -147,7 +118,7 @@
                     links[i].parentElement.style.display = 'none';
                 }
             }
-            searchResultsHeading.textContent = '';
+            searchResultsHeading.textContent = 'Search Results (' + resultsCount + ')';
         }
 
         function loadWriteupContent(writeupUrl, title) {
@@ -239,6 +210,5 @@
         window.onload = function () {
             loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
         };
-    </script>
 </body>
 </html>
