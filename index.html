@@ -88,6 +88,7 @@
     }
 #search-box
 {
+
  color: #ffffff;
         background-color: #000000;
 }
@@ -95,6 +96,7 @@
 {
  color: #ffffff;
         background-color: #000000;
+ 
 } 
 @media only screen and (max-width: 600px) {
     #main-content {
@@ -109,19 +111,21 @@
 </head>
 <body>
 
-    <h1>Missn</h1>
-    <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
-    
-    <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">search</button>
 
     <div id="sidebar">
+
+    <h1>Missn</h1>
+    <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">    <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">search</button>
+
+    
         <h2>Archive</h2>
-        <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
                 <ul class="vertical" id="archive-list" hidden>     
  </ul> 
         <ul class="vertical" id="archive-list1">
  <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
                          <li><a href="https://missnhome.github.io/blog/2023/practice">practice</a></li>
+        <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
+
         </ul>
     </div>
 
@@ -158,8 +162,8 @@
                 var truncatedTitle = links[i].title.toLowerCase();
                 var link = links[i].href.toLowerCase();
                 var content = links[i].dataset.content.toLowerCase();
-
-                if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
+                var writeup=loadWriteupContent(link)
+                if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)|| writeup.includes(query)) {
                     links[i].parentElement.style.display = '';
                     resultsCount++;
                 } else {
