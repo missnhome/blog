@@ -263,7 +263,11 @@
         }
 
         window.onload = function () {
-            loadWriteupContent('https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md');
+loadLinksFromTextFile('links.txt');
+
+    // Load the content for a specific URL
+    var specificURL = 'https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md';
+    loadWriteupContent(specificURL, 'Custom Title');
         };
     </script>
 </body>
