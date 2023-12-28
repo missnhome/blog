@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
     <style>
-         body {
+            body {
             font-family: 'Courier New', monospace; 
             background-color: #1e1e1e; /* Dark background color */
             color: #ffffff; /* Light text color */
@@ -14,11 +14,11 @@
         }
 
         h1, h2, h3 {
-            color: #61dafb; /* Sky blue heading color */
+            color: #ed333b; /* Sky blue heading color */
         }
 
         a {
-            color: #00ff00; /* Green link color */
+            color: #ed333b; /* Green link color */
         }
 
         ul {
@@ -75,7 +75,7 @@
         text-align: center;
         text-decoration: none;
         color: #ffffff;
-        background-color: #3c5d6e;
+        background-color: #000000;
         border-radius: 6px;
         outline: none;
         transition: 0.3s;
@@ -83,9 +83,19 @@
     }
 
     .comment-button:hover {
-        background-color: #c2c7c7;
+        background-color: #000000;
         border-color: #7aa8b7;
     }
+#search-box
+{
+ color: #ffffff;
+        background-color: #000000;
+}
+.searchbotton
+{
+ color: #ffffff;
+        background-color: #000000;
+}
     </style>
 </head>
 <body>
@@ -93,7 +103,7 @@
     <h1>Missn</h1>
     <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
     
-    <button onclick="loadLinksFromTextFile('links.txt')">search</button>
+    <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">search</button>
 
     <div id="sidebar">
         <h2>Archive</h2>
