@@ -5,5 +5,6 @@ mod 26 rot 13 with python, https://missnhome.github.io/blog/2023/practice/obedia
 information  sample base64 with exiftool and forensics, https://missnhome.github.io/blog/2023/practice/information/writeup1.md
 python wrangling  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/PythonWrangling/writeup1.md
 wave a aflag , https://missnhome.github.io/blog/2023/practice/waveaflag/writeup1.md
+get ahead using burpsuit and curl for head request in url and web exploitation, https://missnhome.github.io/blog/2023/practice/getahead/writeup1.md
 
 
