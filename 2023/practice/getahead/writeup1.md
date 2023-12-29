@@ -41,9 +41,8 @@ Find the flag being held on this server to get ahead of the competition http://m
 <li>another way is use burpsuit and change get to head request and forward it and see result in proxy histry</li>
 <li>and can get in burpsuit  whne click on post or head request in history 
 </li>
-<img src="burp1.jpg" alt=" ">
+<img src="https://github.com/missnhome/blog/blob/main/2023/practice/getahead/burp1.png" alt="burpsuit">
 
-!["burp history"](https://github.com/missnhome/blog/blob/main/2023/practice/getahead/burp1.png)
 
      
                
