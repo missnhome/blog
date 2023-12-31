@@ -107,14 +107,28 @@
         max-width: 100%;
     }
 }
+#newYearEffect {
+            display: none;
+            font-size: 24px;
+            color: #fff;
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
     </style>
 </head>
+
 <body>
 
 
     <div id="sidebar">
 
-    <h1>Missn happy new year 2024</h1>
+    <h1>Missn</h1>
     <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">    <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">search</button>
 
     
@@ -122,11 +136,9 @@
                 <ul class="vertical" id="archive-list" hidden>     
  </ul> 
         <ul class="vertical" id="archive-list1">
-         <li><a href="https://missnhome.github.io/blog/2023/asisctf2023">asisctf2023</a></li>
- <li><a href="https://missnhome.github.io/blog/2023
- /nitectf2023">Nitectf2023</a></li>
-  <ul class="vertical" id="archive-list1">
+ <li><a href="https://missnhome.github.io/blog/2023/aisisctf2023">asisctf2023</a></li>
 
+ <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
                          <li><a href="https://missnhome.github.io/blog/2023/practice">practice</a></li>
         <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
 
@@ -136,11 +148,10 @@
     <div id="main-content">
         <h2 id="search-results-heading">Headings</h2>
         <ul class="horizontal" id="writeup-list">
-                                   <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md')">happy new year </a></li>
-                 <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/asisctf2023/happynewyear')">...</a></li>
+                                 <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md')">happy new year</a></li>
+             <li><a href="https://github.com/missnhome/blog/blob/main/2023/practice">...</a></li>
              <div id="writeup-content">
-
-
+ 
             <p>Select a writeup from the sidebar to view its content.</p>
         </div>
  
@@ -263,8 +274,43 @@
         }
 
         window.onload = function () {
-            loadWriteupContent('https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md');
+loadLinksFromTextFile('links.txt');
+
+    // Load the content for a specific URL
+    var specificURL = 'https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md';
+    loadWriteupContent(specificURL, 'Custom Title');
         };
     </script>
+      <script>
+        function checkMagicString(value) {
+            const magicString = "ASIS{🎈🍻💃🌃🎆🎇🍾🎉🎊🍷🍸🍹🍺🏙️🍆🗻🥃🥂🕺🌉🕛🥳👯}";
+
+            if (value === magicString) {
+                showNewYearEffect();
+            } else {
+                hideNewYearEffect();
+            }
+        }
+
+        function showNewYearEffect() {
+            const newYearEffect = document.getElementById("newYearEffect");
+            newYearEffect.style.display = "block";
+            setTimeout(() => {
+                hideNewYearEffect();
+            }, 5000); // Hide the effect after 5 seconds
+        }
+
+        function hideNewYearEffect() {
+            const newYearEffect = document.getElementById("newYearEffect");
+            newYearEffect.style.display = "none";
+        }
+    </script>
+    <label for="textInput">flag</label>
+    <input type="text" id="textInput" oninput="checkMagicString(this.value)">
+    
+    <div id="newYearEffect">
+        🎉🎊 Happy New Year 2024! 🎊🎉
+    </div>
+
 </body>
 </html>
