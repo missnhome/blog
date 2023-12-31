@@ -33,9 +33,9 @@ ASIS{🎈🍻💃🌃🎆🎇🍾🎉🎊🍷🍸🍹🍺🏙️🍆🗻🥃🥂
     <h2>Solution Approach</h2>
     <p>Here are the steps we took to solve the challenge:</p>
     <ol>
-        <li>this ctf is for copy flag and past it</li>
+        <li> this ctf is for copy flag and past it </li>
        <li>in input box below too see result;)</li>
-        <li>not any more:)</li>
+       <li>not any more:)</li>
     </ol>
 
     <h2>Flag</h2>
