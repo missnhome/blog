@@ -141,7 +141,13 @@
  <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
                          <li><a href="https://missnhome.github.io/blog/2023/practice">practice</a></li>
         <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
-
+ <p></p>
+<label for="textInput">enter flag</label>
+    <input type="text" id="textInput" oninput="checkMagicString(this.value)">
+    
+    <div id="newYearEffect">
+        🎉🎊 Happy New Year 2024! 🎊🎉
+    </div>
         </ul>
     </div>
 
@@ -305,12 +311,7 @@
             newYearEffect.style.display = "none";
         }
     </script>
-    <label for="textInput">flag</label>
-    <input type="text" id="textInput" oninput="checkMagicString(this.value)">
-    
-    <div id="newYearEffect">
-        🎉🎊 Happy New Year 2024! 🎊🎉
-    </div>
+   
 
 </body>
 </html>
