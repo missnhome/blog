@@ -39,7 +39,7 @@
        <li>becaouse long text use with grep(that is for search in linux command with "|" .  </li>
         <li> $strings ./static  |grep 'pico'
     </ol>
-
+<br>
     <h2>Flag</h2>
     <p class="flag">The flag for this challenge is `picoCTF{d15a5m_t34s3r_ccb2b43e}`.</p>
 
