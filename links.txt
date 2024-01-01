@@ -1,10 +1,10 @@
 erass nitectf2023 using cat and wget in linux,https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md    
 obediant cat  in linux, https://missnhome.github.io/blog/2023/practice/obediantcat/writeup1.md
 nice netcat netcat in linux , https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md
-mod 26 rot 13 with python, https://missnhome.github.io/blog/2023/practice/obediantcat/writeup1.md
-information  sample base64 with exiftool and forensics, https://missnhome.github.io/blog/2023/practice/information/writeup1.md
-python wrangling  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/PythonWrangling/writeup1.md
-wave a aflag , https://missnhome.github.io/blog/2023/practice/waveaflag/writeup1.md
-get ahead using burpsuit and curl for head request in url and web exploitation, https://missnhome.github.io/blog/2023/practice/getahead/writeup1.md
-
-
+mod 26 rot 13 with python, https://missnhome.github.io/blog/2023/practice/picoctf/obediantcat/writeup1.md
+information  sample base64 with exiftool and forensics, https://missnhome.github.io/blog/2023/practice/picoctf/information/writeup1.md
+python wrangling  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/picoctf/PythonWrangling/writeup1.md
+wave a aflag , https://missnhome.github.io/blog/2023/practice/picoctf/waveaflag/writeup1.md
+get ahead using burpsuit and curl for head request in url and web exploitation, https://missnhome.github.io/blog/2023/practice/picoctf/getahead/writeup1.md
+happy new year copy and past flag https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.
+Matryoshka Doll work with nested zip and images in python , https://missnhome.github.io/blog/2023/practice/picoctf/Matryoshkadoll/writeup1.md
