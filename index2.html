@@ -28,7 +28,7 @@
         <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
  <p></p>
 <label for="textInput">enter flag</label>
-    <input type="text" id="textInput" oninput="checkMagicString(this.value)">
+    <input type="text" id="textInput" oninput="checkFlag(this.value)">
     
     <div id="newYearEffect">
         🎉🎊 Happy New Year 2024! 🎊🎉
@@ -56,29 +56,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        function filterWriteups() {
-            var query = document.getElementById('search-box').value.toLowerCase();
-            var links = document.getElementsByClassName('writeup-link');
-            var searchResultsHeading = document.getElementById('search-results-heading');
-            var resultsCount = 0;
-
-            for (var i = 0; i < links.length; i++) {
-                var title = links[i].textContent.toLowerCase();
-                var truncatedTitle = links[i].title.toLowerCase();
-                var link = links[i].href.toLowerCase();
-                var content = links[i].dataset.content.toLowerCase();
-                var writeup=loadWriteupContent(link)
-                if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
-                    links[i].parentElement.style.display = '';
-                    resultsCount++;
-                } else {
-                    links[i].parentElement.style.display = 'none';
-                }
-            }
-            searchResultsHeading.textContent = '';
-        }
-
-        function loadWriteupContent(writeupUrl, title) {
+        function loadWriteupContent(writeupUrl) {
             fetch(writeupUrl)
                 .then(response => {
                     if (!response.ok) {
@@ -87,11 +65,37 @@
                     return response.text();
                 })
                 .then(data => {
+                    // Create a temporary element to parse the HTML content
+                    var tempElement = document.createElement('div');
+                    tempElement.innerHTML = data;
+
+                    // Extract the flag element
+                    var flagElement = tempElement.querySelector('.flag');
+
+                    // Extract the flag text
+                    var flag = flagElement ? flagElement.textContent.trim() : null;
+
+                    // Display the flag in the console (for testing)
+                    console.log('Flag:', flag);
+
+                    // Render the writeup content
                     document.getElementById('writeup-content').innerHTML = renderMarkdown(data);
+
+                    // Check if the flag exists and update the UI accordingly
+                    if (flag) {
+                        document.getElementById('newYearEffect').style.display = 'none';
+                    } else {
+                        document.getElementById('newYearEffect').style.display = 'block';
+                    }
                 })
                 .catch(error => {
                     console.error('Error fetching or parsing content:', error);
                 });
+        }
+
+        function checkFlag(userInput) {
+            // Load the writeup content on user input change
+            loadWriteupContent('https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md');
         }
 
         function renderMarkdown(content) {
@@ -100,103 +104,12 @@
                 .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         }
 
-        function loadLinksFromTextFile(file) {
-            fetch(file)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Failed to fetch ${file}. Status: ${response.status}`);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    var links = parseLinksFromText(data);
-                    updateSidebar(links);
-                })
-                .catch(error => {
-                    console.error('Error loading links:', error);
-                });
-        }
-
-        function parseLinksFromText(text) {
-            var links = [];
-            var lines = text.split('\n');
-            for (var i = 0; i < lines.length; i++) {
-                var parts = lines[i].split(',');
-                if (parts.length === 2) {
-                    links.push({ title: parts[0].trim(), url: parts[1].trim() });
-                }
-            }
-            return links;
-        }
-
-        function updateSidebar(links) {
-            var archiveList = document.getElementById('archive-list');
-            var writeupList = document.getElementById('writeup-list');
-            
-            archiveList.innerHTML = ''; // Clear existing content
-            writeupList.innerHTML = ''; // Clear existing content
-
-            for (var i = 0; i < links.length; i++) {
-                // Add the link to the archive
-                var archiveItem = document.createElement('li');
-                archiveItem.textContent = links[i].title;
-                archiveList.appendChild(archiveItem);
-
-                // Add the link to the headings
-                var writeupItem = document.createElement('li');
-                var link = document.createElement('a');
-                link.href = links[i].url;
-                link.textContent = links[i].title.substring(0, 10); // Display only the first 10 characters
-                link.title = links[i].title; // Store the full title as a title attribute
-                link.classList.add('writeup-link'); // Add the 'writeup-link' class
-                link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
-                writeupItem.appendChild(link);
-                writeupList.appendChild(writeupItem);
-
-                // Load writeup content on click
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
-                });
-            }
-
-            // After updating the sidebar, trigger the filterWriteups function
-            filterWriteups();
-        }
-
+        // Load the writeup content on page load
         window.onload = function () {
-
-
-    // Load the content for a specific URL
-    var specificURL = 'https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md';
-    loadWriteupContent(specificURL, 'Custom Title');
+            loadWriteupContent('https://missnhome.github.io/blog/2023/practice/picoctf/nicenetcat/writeup1.md');
         };
     </script>
-      <script>
-        function checkMagicString(value) {
-            const magicString = "ASIS{🎈🍻💃🌃🎆🎇🍾🎉🎊🍷🍸🍹🍺🏙️🍆🗻🥃🥂🕺🌉🕛🥳👯}";
-
-            if (value === magicString) {
-                showNewYearEffect();
-            } else {
-                hideNewYearEffect();
-            }
-        }
-
-        function showNewYearEffect() {
-            const newYearEffect = document.getElementById("newYearEffect");
-            newYearEffect.style.display = "block";
-            setTimeout(() => {
-                hideNewYearEffect();
-            }, 5000); // Hide the effect after 5 seconds
-        }
-
-        function hideNewYearEffect() {
-            const newYearEffect = document.getElementById("newYearEffect");
-            newYearEffect.style.display = "none";
-        }
-    </script>
-   
+      
 
 </body>
 </html>
