@@ -62,3 +62,41 @@
         ul.horizontal li a:hover {
             background-color: #111;
         }
+.comment-button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #000000;
+        border-radius: 6px;
+        outline: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
+    }
+
+    .comment-button:hover {
+        background-color: #000000;
+        border-color: #7aa8b7;
+    }
+#search-box
+{
+
+ color: #ffffff;
+        background-color: #000000;
+}
+.searchbotton
+{
+ color: #ffffff;
+        background-color: #000000;
+ 
+} 
+@media only screen and (max-width: 600px) {
+    #main-content {
+        margin: 5px;
+    }
+
+    #sidebar {
+        max-width: 100%;
+    }
+}

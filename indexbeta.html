@@ -4,117 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
-    <style>
-            body {
-            font-family: 'Courier New', monospace; 
-            background-color: #1e1e1e; /* Dark background color */
-            color: #ffffff; /* Light text color */
-            margin: 0;
-            padding: 20px;
-        }
+ <link rel="stylesheet" href="static/css/missn.css" />
+      
 
-        h1, h2, h3 {
-            color: #ed333b; /* Sky blue heading color */
-        }
-
-        a {
-            color: #ed333b; /* Green link color */
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        #sidebar {
-            float: left;
-            width: 20%;
-        }
-
-        #main-content {
-            float: left;
-            width: 80%;
-        }
-
-        #writeup-content {
-            padding: 20px;
-            background-color: #2a2a2a; /* Darker background color for writeup content */
-            border-radius: 5px;
-        }
-           ul.horizontal {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #333;
-        }
-
-        ul.horizontal li {
-            float: left;
-        }
-
-        ul.horizontal li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-
-        /* Change the link color to #111 (black) on hover */
-        ul.horizontal li a:hover {
-            background-color: #111;
-        }
-.comment-button {
-        display: inline-block;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        color: #ffffff;
-        background-color: #000000;
-        border-radius: 6px;
-        outline: none;
-        transition: 0.3s;
-        border: 2px solid transparent;
-    }
-
-    .comment-button:hover {
-        background-color: #000000;
-        border-color: #7aa8b7;
-    }
-#search-box
-{
-
- color: #ffffff;
-        background-color: #000000;
-}
-.searchbotton
-{
- color: #ffffff;
-        background-color: #000000;
  
-} 
-@media only screen and (max-width: 600px) {
-    #main-content {
-        margin: 5px;
-    }
-
-    #sidebar {
-        max-width: 100%;
-    }
-}
-    </style>
 </head>
 <body>
 
 
     <div id="sidebar">
 
-    <h1>Missn</h1>
+     <img src="https://github.com/missnhome/missn.github.io/assets/154452140/361f8110-181d-4d1d-87c0-a9f5c2197422" alt="Missn Image" width="100" height="100" align="left">
+
+        <a href="https://www.freecounterstat.com" title="web hit counter">
+            <img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=3lu84ceb8d5kpm7lnu4g6jg5ulrltmbk" border="0" title="web hit counter" alt="web hit counter">
+        </a>
+
     <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">    <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">search</button>
 
     
@@ -125,10 +30,17 @@
  <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
                          <li><a href="https://missnhome.github.io/blog/2023/practice">practice</a></li>
         <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
-
+<label for="textInput">enter flag</label>
+    <input type="text" id="textInput" oninput="checkMagicString(this.value)">
+    
+    <div id="newYearEffect" style="display: none;">
+        🎉🎊 Happy New Year 2024! 🎊🎉
+    </div>
         </ul>
     </div>
-
+<script  src="https://missnhome.github.io/blog/static/js/flag.js">
+     
+    </script>
     <div id="main-content">
         <h2 id="search-results-heading">Headings</h2>
         <ul class="horizontal" id="writeup-list">
