@@ -4,6 +4,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            color:#1B181B;
         }
         h1 {
             color: #333;
