@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISSN</title>
+    <link rel="stylesheet" href="https://missnhome.github.io/blog/static/css/missn.css" />
+</head>
+
+<body>
+    <div id="sidebar">
+     <img src="https://github.com/missnhome/missn.github.io/assets/154452140/361f8110-181d-4d1d-87c0-a9f5c2197422" alt="Missn Image" width="100" height="100" align="left">
+
+        <a href="https://www.freecounterstat.com" title="web hit counter">
+            <img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=3lu84ceb8d5kpm7lnu4g6jg5ulrltmbk" border="0" title="web hit counter" alt="web hit counter">
+        </a>
+
+        <!-- Replace the <h1> with an image -->
+
+
+        <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
+        <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">search</button>
+
+        <h2>Archive</h2>
+          
+        <ul class="vertical" id="archive-list" hidden></ul>
+        <ul class="vertical" id="archive-list1">
+            <li><a href="https://missnhome.github.io/blog/2023/asisctf2023/">asisctf2023</a></li>
+            <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
+            <li><a href="https://missnhome.github.io/blog/2023/practice">practice</a></li>
+            <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
+            <p></p>
+            <label for="textInput">enter flag</label>
+            <input type="text" id="textInput" oninput="checkFlag(this.value)">
+            <div id="newYearEffect">
+                🎉🎊 Happy New Year 2024! 🎊🎉
+            </div>
+        </ul>
+    </div>
+
+    <div id="main-content">
+        <h2 id="search-results-heading">Headings</h2>
+        <ul class="horizontal" id="writeup-list">
+            <li><a onclick="loadWriteupC
