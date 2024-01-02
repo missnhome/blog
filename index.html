@@ -20,7 +20,7 @@
             <img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=3lu84ceb8d5kpm7lnu4g6jg5ulrltmbk" border="0" title="web hit counter" alt="web hit counter">
         </a>
 
-    <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">    <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">search</button>
+    <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">    <button class="searchbotton" onclick="loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt')">search</button>
 
     
         <h2>Archive</h2>
@@ -63,13 +63,19 @@
             <p>Select a writeup from the sidebar to view its content.</p>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script  src="https://missnhome.github.io/blog/static/js/parsewriteups.js">
-        
-    </script>
-    <script  src="https://missnhome.github.io/blog/static/js/flag.js">
+<script  src="https://missnhome.github.io/blog/static/js/flag.js">
      
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script  src="https://missnhome.github.io/blog/static/js/parsewriteups.js">
+           window.onload = function () {
+
+
+    // Load the content for a specific URL
+    var specificURL = 'https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md';
+    loadWriteupContent(specificURL, 'Custom Title');
+        };
+    </script>
+    
    
 </html>

@@ -106,10 +106,4 @@ function filterWriteups() {
             filterWriteups();
         }
 
-        window.onload = function () {
-
-
-    // Load the content for a specific URL
-    var specificURL = 'https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md';
-    loadWriteupContent(specificURL, 'Custom Title');
-        };
+     
