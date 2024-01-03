@@ -1,4 +1,6 @@
- function loadWriteupContent(writeupUrl) {
+ var currentWriteupUrl = '';
+
+        function loadWriteupContent(writeupUrl) {
             fetch(writeupUrl)
                 .then(response => {
                     if (!response.ok) {
@@ -25,9 +27,9 @@
 
                     // Check if the flag exists and update the UI accordingly
                     if (flag) {
-                        document.getElementById('newYearEffect').style.display = 'none';
-                    } else {
                         document.getElementById('newYearEffect').style.display = 'block';
+                    } else {
+                        document.getElementById('newYearEffect').style.display = 'none';
                     }
                 })
                 .catch(error => {
@@ -35,9 +37,13 @@
                 });
         }
 
-        function checkFlag(userInput) {
-            // Load the writeup content on user input change
-            loadWriteupContent('https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md');
+        function checkFlag() {
+            var userInput = document.getElementById('textInput').value;
+            
+            // Check if a writeup is currently selected
+            if (currentWriteupUrl) {
+                loadWriteupContent(currentWriteupUrl);
+            }
         }
 
         function renderMarkdown(content) {
@@ -46,7 +52,18 @@
                 .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         }
 
-        // Load the writeup content on page load
-        window.onload = function () {
-            loadWriteupContent('https://missnhome.github.io/blog/2023/practice/picoctf/nicenetcat/writeup1.md');
-        };
+        // Attach click event listeners to each writeup link
+        var writeupLinks = document.querySelectorAll('.writeup-link');
+        writeupLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                currentWriteupUrl = link.href;
+                loadWriteupContent(currentWriteupUrl);
+            });
+        });
+
+        // Load the content of the first writeup on page load
+        if (writeupLinks.length > 0) {
+            currentWriteupUrl = writeupLinks[0].href;
+            loadWriteupContent(currentWriteupUrl);
+        }
