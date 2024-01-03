@@ -20,17 +20,12 @@
                     var flag = flagElement ? flagElement.textContent.trim() : null;
 
                     // Display the flag in the console (for testing)
-                    console.log('Flag:', flag);
+                    console.log('Flag0:', flag);
 
                     // Render the writeup content
                     document.getElementById('writeup-content').innerHTML = renderMarkdown(data);
 
-                    // Check if the flag exists and update the UI accordingly
-                    if (flag) {
-                        document.getElementById('newYearEffect').style.display = 'block';
-                    } else {
-                        document.getElementById('newYearEffect').style.display = 'none';
-                    }
+                   
                 })
                 .catch(error => {
                     console.error('Error fetching or parsing content:', error);
@@ -39,11 +34,13 @@
 
         function checkFlag() {
             var userInput = document.getElementById('textInput').value;
-            
-            // Check if a writeup is currently selected
-            if (currentWriteupUrl) {
-                loadWriteupContent(currentWriteupUrl);
-            }
+                                console.log('Flag:', flag+":"+userInput);
+ 
+             if (flag==userInput) {
+                        document.getElementById('newYearEffect').style.display = 'block';
+                    } else {
+                        document.getElementById('newYearEffect').style.display = 'none';
+                    }
         }
 
         function renderMarkdown(content) {
