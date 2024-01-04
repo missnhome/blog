@@ -1,5 +1,5 @@
  var currentWriteupUrl = '';
-
+var content="";
         function loadWriteupContent(writeupUrl) {
             fetch(writeupUrl)
                 .then(response => {
@@ -13,7 +13,7 @@
 
                     var tempElement = document.createElement('div');
                     tempElement.innerHTML = data;
-
+                     content=data
                     // Extract the flag element
                     var flagElement = tempElement.querySelector('.flag');
 
@@ -35,7 +35,7 @@
 
         function checkFlag() {
 var tempElement = document.createElement('div');
-                    tempElement.innerHTML = data;
+                    tempElement.innerHTML = content;
 
              var flagElement = tempElement.querySelector('.flag');
 
@@ -43,9 +43,9 @@ var tempElement = document.createElement('div');
                     var flag = flagElement ? flagElement.textContent.trim() : null;
 
             var userInput = document.getElementById('textInput').value;
-                                console.log('Flag:', flag+":"+userInput);
+                                console.log('Flag:', flag+":"+userInput+":"+flag.localeCompare(userInput));
  
-             if (flag==userInput) {
+             if (flag.localeCompare(userInput)==0) {
                         document.getElementById('newYearEffect').style.display = 'block';
                     } else {
                         document.getElementById('newYearEffect').style.display = 'none';

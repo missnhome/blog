@@ -40,7 +40,7 @@ ASIS{🎈🍻💃🌃🎆🎇🍾🎉🎊🍷🍸🍹🍺🏙️🍆🗻🥃🥂
     </ol>
 
     <h2>Flag</h2>
-    <p class="flag">The flag for this challenge is `ASIS{🎈🍻💃🌃🎆🎇🍾🎉🎊🍷🍸🍹🍺🏙️🍆🗻🥃🥂🕺🌉🕛🥳👯}`.</p>
+    <p class="flag">ASIS{🎈🍻💃🌃🎆🎇🍾🎉🎊🍷🍸🍹🍺🏙️🍆🗻🥃🥂🕺🌉🕛🥳👯}</p>
 
     <h2>Conclusion</h2>
     <p>this is a easy chanllenge for celebrate new year 2024</p>
