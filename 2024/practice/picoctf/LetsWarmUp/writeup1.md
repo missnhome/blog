@@ -41,7 +41,7 @@ If I told you a word started with 0x70 in hexadecimal, what would it start with 
     </ol>
 <br>
     <h2>Flag</h2>
-    <p class="flag">The flag for this challenge is `picoCTF{p}`.</p>
+    <p class="flag">picoCTF{p}</p>
 
     <h2>Conclusion</h2>
     <p>this is a very  easy chanllenge for use with asici in python and online tools</p>

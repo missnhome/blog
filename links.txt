@@ -8,3 +8,7 @@ wave a aflag , https://missnhome.github.io/blog/2023/practice/picoctf/waveaflag/
 get ahead using burpsuit and curl for head request in url and web exploitation, https://missnhome.github.io/blog/2023/practice/picoctf/getahead/writeup1.md
 happy new year copy and past flag https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.
 Matryoshka Doll work with nested zip and images in python , https://missnhome.github.io/blog/2023/practice/picoctf/Matryoshkadoll/writeup1.md
+Insp3ct0r work with inspect and web developer in web browser, https://missnhome.github.io/blog/2024/practice/picoctf/Insp3ct0r/writeup1.md
+LetsWarmUp convert decimal to asci in python, https://missnhome.github.io/blog/2024/practice/picoctf/LetsWarmUp/writeup1.md
+tab tab attack use tab autocomplete in linux terminal, https://missnhome.github.io/blog/2024/practice/picoctf/tabtabattack/writeup1.md
+Staticainotalwaysnoise analysis bash and elf binary files in linux, https://missnhome.github.io/blog/2024/practice/picoctf/Staticainotalwaysnoise/writeup1.md

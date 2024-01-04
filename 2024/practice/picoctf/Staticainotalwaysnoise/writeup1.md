@@ -41,7 +41,7 @@
     </ol>
 <br>
     <h2>Flag</h2>
-    <p class="flag">The flag for this challenge is `picoCTF{d15a5m_t34s3r_ccb2b43e}`.</p>
+    <p class="flag">picoCTF{d15a5m_t34s3r_ccb2b43e}</p>
 
     <h2>Conclusion</h2>
     <p>this is a easy chanllenge for using linux command and analysis bath and linux with grep and strings </p>

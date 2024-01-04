@@ -9,7 +9,7 @@
         }
 
         function showNewYearEffect() {
-            const newYearEffect = document.getElementById("newYearEffect");
+            const newYearEffect = document.getElementById("checkflag");
             newYearEffect.style.display = "block";
             setTimeout(() => {
                 hideNewYearEffect();
@@ -17,6 +17,6 @@
         }
 
         function hideNewYearEffect() {
-            const newYearEffect = document.getElementById("newYearEffect");
+            const newYearEffect = document.getElementById("checkflag");
             newYearEffect.style.display = "none";
         }
