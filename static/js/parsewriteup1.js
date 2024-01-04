@@ -33,6 +33,11 @@
         }
 
         function checkFlag() {
+             var flagElement = tempElement.querySelector('.flag');
+
+                    // Extract the flag text
+                    var flag = flagElement ? flagElement.textContent.trim() : null;
+
             var userInput = document.getElementById('textInput').value;
                                 console.log('Flag:', flag+":"+userInput);
  
