@@ -10,6 +10,7 @@
                 })
                 .then(data => {
                     // Create a temporary element to parse the HTML content
+
                     var tempElement = document.createElement('div');
                     tempElement.innerHTML = data;
 
@@ -33,6 +34,9 @@
         }
 
         function checkFlag() {
+var tempElement = document.createElement('div');
+                    tempElement.innerHTML = data;
+
              var flagElement = tempElement.querySelector('.flag');
 
                     // Extract the flag text
