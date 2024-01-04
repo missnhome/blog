@@ -46,9 +46,9 @@ var tempElement = document.createElement('div');
                                 console.log('Flag:', flag+":"+userInput+":"+flag.localeCompare(userInput));
  
              if (flag.localeCompare(userInput)==0) {
-                        document.getElementById('newYearEffect').style.display = 'block';
+                        document.getElementById('checkflag').style.display = 'block';
                     } else {
-                        document.getElementById('newYearEffect').style.display = 'none';
+                        document.getElementById('checkflag').style.display = 'none';
                     }
         }
 
