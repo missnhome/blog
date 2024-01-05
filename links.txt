@@ -13,3 +13,4 @@ LetsWarmUp convert decimal to asci in python, https://missnhome.github.io/blog/2
 tab tab attack use tab autocomplete in linux terminal, https://missnhome.github.io/blog/2024/practice/picoctf/tabtabattack/writeup1.md
 Staticainotalwaysnoise analysis bash and elf binary files in linux, https://missnhome.github.io/blog/2024/practice/picoctf/Staticainotalwaysnoise/writeup1.md
 crackme reverse enginering and cryptography in python ,https://missnhome.github.io/blog/2024/practice/picoctf/crackme/writeup1.md
+warmed up convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
