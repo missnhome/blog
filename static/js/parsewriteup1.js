@@ -32,7 +32,17 @@ var content="";
                     console.error('Error fetching or parsing content:', error);
                 });
         }
-
+function parseLinksFromText(text) {
+            var links = [];
+            var lines = text.split('\n');
+            for (var i = 0; i < lines.length; i++) {
+                var parts = lines[i].split(',');
+                if (parts.length === 2) {
+                    links.push({ title: parts[0].trim(), url: parts[1].trim() });
+                }
+            }
+            return links;
+        }
         function checkFlag() {
 var tempElement = document.createElement('div');
                     tempElement.innerHTML = content;
