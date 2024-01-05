@@ -1,5 +1,26 @@
  var currentWriteupUrl = '';
 var content="";
+function filterWriteups() {
+            var query = document.getElementById('search-box').value.toLowerCase();
+            var links = document.getElementsByClassName('writeup-link');
+            var searchResultsHeading = document.getElementById('search-results-heading');
+            var resultsCount = 0;
+
+            for (var i = 0; i < links.length; i++) {
+                var title = links[i].textContent.toLowerCase();
+                var truncatedTitle = links[i].title.toLowerCase();
+                var link = links[i].href.toLowerCase();
+                var content = links[i].dataset.content.toLowerCase();
+                var writeup=loadWriteupContent(link)
+                if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
+                    links[i].parentElement.style.display = '';
+                    resultsCount++;
+                } else {
+                    links[i].parentElement.style.display = 'none';
+                }
+            }
+            searchResultsHeading.textContent = '';
+        }
         function loadWriteupContent(writeupUrl) {
             fetch(writeupUrl)
                 .then(response => {
@@ -30,6 +51,22 @@ var content="";
                 })
                 .catch(error => {
                     console.error('Error fetching or parsing content:', error);
+                });
+        }
+        function loadLinksFromTextFile(file) {
+            fetch(file)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch ${file}. Status: ${response.status}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    var links = parseLinksFromText(data);
+                    updateSidebar(links);
+                })
+                .catch(error => {
+                    console.error('Error loading links:', error);
                 });
         }
 function parseLinksFromText(text) {
