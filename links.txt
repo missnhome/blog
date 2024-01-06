@@ -14,3 +14,4 @@ tab tab attack use tab autocomplete in linux terminal, https://missnhome.github.
 Staticainotalwaysnoise analysis bash and elf binary files in linux, https://missnhome.github.io/blog/2024/practice/picoctf/Staticainotalwaysnoise/writeup1.md
 crackme reverse enginering and cryptography in python ,https://missnhome.github.io/blog/2024/practice/picoctf/crackme/writeup1.md
 warmed up convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
+buffer over flow 0 picoctf 2022 ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
