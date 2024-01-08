@@ -35,9 +35,12 @@ Hint! FYI: flag is all lowercase and _ for spaces. Please remove all accent mark
     <ol>
         <li>  i open this image
  https://missnhome.github.io/blog/2024/irisctf/czech-where/image.png
+ <img src="image.png" alt="hi" class="inline"/>
+
 search via image search wasn't successful  fo me but search word on image give me address 
 on image i found it has label on door but picture was same from google map search  
  https://missnhome.github.io/blog/2024/irisctf/czech-where/googlemap.png
+<img src="googlemap.png" alt="hi" class="inline"/>
 
  </li>
        
