@@ -15,3 +15,4 @@ Staticainotalwaysnoise analysis bash and elf binary files in linux, https://miss
 crackme reverse enginering and cryptography in python ,https://missnhome.github.io/blog/2024/practice/picoctf/crackme/writeup1.md
 warmed up convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
 buffer over flow 0 picoctf 2022 ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
+czech-where osint search on internet and google map,https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md
