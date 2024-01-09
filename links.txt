@@ -16,3 +16,4 @@ crackme picoctf reverse enginering and cryptography in python ,https://missnhome
 warmedup  picoctf convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
 bufferoverflow0 picoctf2022 binary exploitation via ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
 czech-where irisctf2024 osint search on internet and google map,https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md
+thejohnsons irisctf2024 reverse enginering with gidra,  https://missnhome.github.io/blog/2024/practice/irisctf2024/thejohnsons/writeup1.md
