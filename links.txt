@@ -1,18 +1,18 @@
 erass nitectf2023 using cat and wget in linux,https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md    
-obediant cat  in linux, https://missnhome.github.io/blog/2023/practice/obediantcat/writeup1.md
-nice netcat netcat in linux , https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md
-mod 26 rot 13 with python, https://missnhome.github.io/blog/2023/practice/picoctf/obediantcat/writeup1.md
-information  sample base64 with exiftool and forensics, https://missnhome.github.io/blog/2023/practice/picoctf/information/writeup1.md
-python wrangling  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/picoctf/PythonWrangling/writeup1.md
-wave a aflag , https://missnhome.github.io/blog/2023/practice/picoctf/waveaflag/writeup1.md
-get ahead using burpsuit and curl for head request in url and web exploitation, https://missnhome.github.io/blog/2023/practice/picoctf/getahead/writeup1.md
-happy new year copy and past flag https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.
-Matryoshka Doll work with nested zip and images in python , https://missnhome.github.io/blog/2023/practice/picoctf/Matryoshkadoll/writeup1.md
-Insp3ct0r work with inspect and web developer in web browser, https://missnhome.github.io/blog/2024/practice/picoctf/Insp3ct0r/writeup1.md
-LetsWarmUp convert decimal to asci in python, https://missnhome.github.io/blog/2024/practice/picoctf/LetsWarmUp/writeup1.md
-tab tab attack use tab autocomplete in linux terminal, https://missnhome.github.io/blog/2024/practice/picoctf/tabtabattack/writeup1.md
-Staticainotalwaysnoise analysis bash and elf binary files in linux, https://missnhome.github.io/blog/2024/practice/picoctf/Staticainotalwaysnoise/writeup1.md
-crackme reverse enginering and cryptography in python ,https://missnhome.github.io/blog/2024/practice/picoctf/crackme/writeup1.md
-warmed up convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
-buffer over flow 0 picoctf 2022 ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
-czech-where osint search on internet and google map,https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md
+obediantcat picoctf  in linux, https://missnhome.github.io/blog/2023/practice/obediantcat/writeup1.md
+nicenetcat picoctf netcat in linux , https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md
+mod 26 picoctf rot 13 with python, https://missnhome.github.io/blog/2023/practice/picoctf/obediantcat/writeup1.md
+information picoctf   sample base64 with exiftool and forensics, https://missnhome.github.io/blog/2023/practice/picoctf/information/writeup1.md
+pythonwrangling picoctf  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/picoctf/PythonWrangling/writeup1.md
+waveaflag picoctf  reverse on python, https://missnhome.github.io/blog/2023/practice/picoctf/waveaflag/writeup1.md
+getahead  picoctf using burpsuit and curl for head request in url and web exploitation, https://missnhome.github.io/blog/2023/practice/picoctf/getahead/writeup1.md
+happynewyear asisctf2023 copy and past flag https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.
+MatryoshkaDoll picoctf  work with nested zip and images in python , https://missnhome.github.io/blog/2023/practice/picoctf/Matryoshkadoll/writeup1.md
+Insp3ct0r picoctf work with inspect and web developer in web browser, https://missnhome.github.io/blog/2024/practice/picoctf/Insp3ct0r/writeup1.md
+LetsWarmUp picoctf convert decimal to asci in python, https://missnhome.github.io/blog/2024/practice/picoctf/LetsWarmUp/writeup1.md
+tabtabattack picoctf  use tab autocomplete in linux terminal, https://missnhome.github.io/blog/2024/practice/picoctf/tabtabattack/writeup1.md
+Staticainotalwaysnoise picoctf analysis bash and elf binary files in linux, https://missnhome.github.io/blog/2024/practice/picoctf/Staticainotalwaysnoise/writeup1.md
+crackme picoctf reverse enginering and cryptography in python ,https://missnhome.github.io/blog/2024/practice/picoctf/crackme/writeup1.md
+warmedup  picoctf convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
+bufferoverflow0 picoctf2022 binary exploitation via ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
+czech-where irisctf2024 osint search on internet and google map,https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md
