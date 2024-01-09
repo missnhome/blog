@@ -1,5 +1,6 @@
  var currentWriteupUrl = '';
 var content="";
+filterWriteups();
 function updateSidebar(links) {
             var archiveList = document.getElementById('archive-list');
             var writeupList = document.getElementById('writeup-list');
