@@ -19,7 +19,7 @@ function updateSidebar(links) {
                 link.href = links[i].url;
                 //link.textContent = links[i].title.substring(0, 10); // Display only the first 10 characters
                 words= links[i].title.split(' ');
-                link.textContent =words[0]+" "+word[1]  
+                link.textContent =words[0]+" "+words[1]  
                 link.title = links[i].title; // Store the full title as a title attribute
                 link.classList.add('writeup-link'); // Add the 'writeup-link' class
                 link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
