@@ -1,0 +1,102 @@
+  body {
+            font-family: 'Courier New', monospace;
+            background-color: #131113;/* Dark background color */
+            color: #ffffff; /* Light text color */
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #61dafb; /* Sky blue heading color */
+        }
+
+        a {
+            color: #61dafb;;  
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #sidebar {
+            float: left;
+            width: 20%;
+        }
+
+        #main-content {
+            float: left;
+            width: 80%;
+        }
+
+        #writeup-content {
+            padding: 20px;
+            background-color: #2a2a2a; /* Darker background color for writeup content */
+            border-radius: 5px;
+        }
+           ul.horizontal {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        ul.horizontal li {
+            float: left;
+        }
+
+        ul.horizontal li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Change the link color to #111 (black) on hover */
+        ul.horizontal li a:hover {
+            background-color: #111;
+        }
+.comment-button {
+        display: inline-block;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: #000000;
+        border-radius: 6px;
+        outline: none;
+        transition: 0.3s;
+        border: 2px solid transparent;
+    }
+
+    .comment-button:hover {
+        background-color: #000000;
+        border-color: #7aa8b7;
+    }
+#search-box
+{
+
+ color: #ffffff;
+        background-color: #000000;
+}
+.searchbotton
+{
+ color: #ffffff;
+        background-color: #000000;
+ 
+} 
+@media only screen and (max-width: 600px) {
+    #main-content {
+        margin: 5px;
+    }
+
+    #sidebar {
+        max-width: 100%;
+    }
+}
