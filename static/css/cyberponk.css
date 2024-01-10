@@ -60,7 +60,7 @@
 
         /* Change the link color to #111 (black) on hover */
         ul.horizontal li a:hover {
-            background-color: #111;
+            background-color: #61dafb;
         }
 .comment-button {
         display: inline-block;
