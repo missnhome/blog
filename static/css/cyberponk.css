@@ -7,7 +7,7 @@
         }
 
         h1, h2, h3 {
-            color: #61dafb; /* Sky blue heading color */
+            color: ##4CC0C0; /* cyberponk color */
         }
 
         a {
@@ -60,7 +60,7 @@
 
         /* Change the link color to #111 (black) on hover */
         ul.horizontal li a:hover {
-            background-color: #61dafb;
+            background-color: #4CC0C0;
         }
 .comment-button {
         display: inline-block;
