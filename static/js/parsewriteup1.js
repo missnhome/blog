@@ -1,6 +1,4 @@
-var currentWriteupUrl = '';
-var content="";
-
+ 
 
 
 function filterWriteups() {
@@ -28,7 +26,7 @@ function filterWriteups() {
             currentWriteupUrl = links[0].href;
             loadWriteupContent(currentWriteupUrl);
         }
-        checkFlag();
+      //  checkFlag();
         }
         function loadWriteupContent(writeupUrl) {
             fetch(writeupUrl)
