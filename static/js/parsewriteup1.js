@@ -131,7 +131,7 @@ var tempElement = document.createElement('div');
              var flagElement = tempElement.querySelector('.flag');
 
                     // Extract the flag text
-                    var flag = flagElement ? flagElement.textContent.trim() : null;
+                    var flag = flagElement ? flagElement.textContent.trim() : "fakeflag";
 
             var userInput = document.getElementById('textInput').value;
                                 console.log('Flag:', flag+":"+userInput+":"+flag.localeCompare(userInput));
