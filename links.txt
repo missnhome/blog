@@ -1,7 +1,7 @@
 erass nitectf2023 using cat and wget in linux,https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md    
 obediantcat picoctf  in linux, https://missnhome.github.io/blog/2023/practice/obediantcat/writeup1.md
 nicenetcat picoctf netcat in linux , https://missnhome.github.io/blog/2023/practice/nicenetcat/writeup1.md
-mod 26 picoctf rot 13 with python, https://missnhome.github.io/blog/2023/practice/picoctf/obediantcat/writeup1.md
+mod 26 picoctf rot 13 with python, https://missnhome.github.io/blog/2023/practice/picoctf/mod26/writeup1.md
 information picoctf   sample base64 with exiftool and forensics, https://missnhome.github.io/blog/2023/practice/picoctf/information/writeup1.md
 pythonwrangling picoctf  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/picoctf/PythonWrangling/writeup1.md
 waveaflag picoctf  reverse on python, https://missnhome.github.io/blog/2023/practice/picoctf/waveaflag/writeup1.md
@@ -17,4 +17,6 @@ warmedup  picoctf convert 0x hex to decimal in python ,https://missnhome.github.
 bufferoverflow0 picoctf2022 binary exploitation via ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
 czech-where irisctf2024 osint search on internet and google map,https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md
 thejohnsons irisctf2024 reverse enginering with gidra,  https://missnhome.github.io/blog/2024/practice/irisctf2024/thejohnsons/writeup1.md 
-Golang reverse enginering work with dcimal and char, https://missnhome.github.io/blog/2024/practice/irisctf2024/runwhatsthat/writeup1.md 
+Rune?What’sthat?  irisctf2024Golang reverse enginering work with dcimal and char, https://missnhome.github.io/blog/2024/practice/irisctf2024/runwhatsthat/writeup1.md 
+what'sMyPassword? irisctf2024  web exploitation  and sql injection vulnerability,https://missnhome.github.io/blog/2024/practice/irisctf2024/whatismypassword/writeup1.md 
+AwayOnVacation irisctf2024 osint and search in instagram,https://missnhome.github.io/blog/2024/practice/irisctf2024/awayonvacation/writeup1.md 
