@@ -107,7 +107,7 @@ function filterWriteups() {
                 })
                 .then(data => {
                     var links = parseLinksFromText(data);
-                    updateSidebar(links);
+                 #   updateSidebar(links);
                 })
                 .catch(error => {
                     console.error('Error loading links:', error);
