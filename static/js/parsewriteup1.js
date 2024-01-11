@@ -48,6 +48,7 @@ function filterWriteups() {
                 var title = links[i].textContent.toLowerCase();
                 var truncatedTitle = links[i].title.toLowerCase();
                 var link = links[i].href.toLowerCase();
+               
                 var content = links[i].dataset.content.toLowerCase();
                 var writeup=loadWriteupContent(link)
                 if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
@@ -58,6 +59,11 @@ function filterWriteups() {
                 }
             }
             searchResultsHeading.textContent = '';
+             if (links.length > 0) {
+            currentWriteupUrl = links[0].href;
+            loadWriteupContent(currentWriteupUrl);
+        }
+        checkFlag();
         }
         function loadWriteupContent(writeupUrl) {
             fetch(writeupUrl)
