@@ -1,6 +1,6 @@
  var currentWriteupUrl = '';
 var content="";
-filterWriteups();
+
 
 
 function filterWriteups() {
