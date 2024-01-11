@@ -1,42 +1,7 @@
  var currentWriteupUrl = '';
 var content="";
 filterWriteups();
-function updateSidebar(links) {
-            var archiveList = document.getElementById('archive-list');
-            var writeupList = document.getElementById('writeup-list');
-            
-            archiveList.innerHTML = ''; // Clear existing content
-            writeupList.innerHTML = ''; // Clear existing content
 
-            for (var i = 0; i < links.length; i++) {
-                // Add the link to the archive
-                var archiveItem = document.createElement('li');
-                archiveItem.textContent = links[i].title;
-                archiveList.appendChild(archiveItem);
-
-                // Add the link to the headings
-                var writeupItem = document.createElement('li');
-                var link = document.createElement('a');
-                link.href = links[i].url;
-                //link.textContent = links[i].title.substring(0, 10); // Display only the first 10 characters
-                words= links[i].title.split(' ');
-                link.textContent =words[0]+" "+words[1]  
-                link.title = links[i].title; // Store the full title as a title attribute
-                link.classList.add('writeup-link'); // Add the 'writeup-link' class
-                link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
-                writeupItem.appendChild(link);
-                writeupList.appendChild(writeupItem);
-
-                // Load writeup content on click
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
-                });
-            }
-
-            // After updating the sidebar, trigger the filterWriteups function
-            filterWriteups();
-        }
 
 function filterWriteups() {
             var query = document.getElementById('search-box').value.toLowerCase();
