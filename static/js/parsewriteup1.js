@@ -1,12 +1,4 @@
-$( '#search-box' ).on( 'keydown', function ( evt ) {
-    if( evt.keyCode == 13 )
-{
-console.log("enter press");
-        filterWriteups() ;
-       checkFlag();
-}
 
-} ); 
 
 function filterWriteups() {
             var query = document.getElementById('search-box').value.toLowerCase();
