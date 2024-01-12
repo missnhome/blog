@@ -89,9 +89,19 @@
 {
  color: #ffffff;
         background-color: #000000;
- 
+ padding-left: 25px;
+  background: url("https://github.com/missnhome/missn.github.io/assets/154452140/8fe76c58-6bd6-484d-8b6c-7b6cf9284b83") no-repeat left;
+  background-size: 20px;
 } 
 @media only screen and (max-width: 600px) {
+.searchbotton
+{
+ color: #ffffff;
+        background-color: #000000;
+ padding-left: 25px;
+  background: url("https://github.com/missnhome/missn.github.io/assets/154452140/8fe76c58-6bd6-484d-8b6c-7b6cf9284b83") no-repeat left;
+  background-size: 20px;
+} 
     #main-content {
         margin: 5px;
     }
