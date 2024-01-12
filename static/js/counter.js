@@ -1,17 +1,31 @@
+ 
+
+// counter.js
+
+// Function to get visitor information from IPinfo API
 function getVisitorInfo() {
-    // Replace 'YOUR_IPINFO_API_KEY' with your actual IPinfo API key
+  
     const apiKey = 'f3c48b44a1fa0c';
-    
+
+    // Check if localStorage has a visitor count
+    let visitorCount = localStorage.getItem('visitorCount') || 0;
+
     // Make a request to IPinfo API to get information about the visitor's IP
     $.get(`https://ipinfo.io?token=${apiKey}`, function(response) {
         // Access the country information from the API response
         const country = response.country;
-        
-        // Display the country information wherever you want in your HTML
-        document.body.innerHTML += `<p>Visitor from: ${country}</p>`;
-        
-        // You can also store the country information as needed
-        // For example, send it to your server for storage
+
+        // Increment the visitor count
+        visitorCount++;
+        // Update the visitor count in localStorage
+        localStorage.setItem('visitorCount', visitorCount);
+
+        // Display the country and visitor count on your page
+        const visitorInfoDiv = document.getElementById('visitor-info');
+        visitorInfoDiv.innerHTML = `<p>Visitor from: ${country}</p><p>Total Visitors: ${visitorCount}</p>`;
+
+        // You can also store the country information and visitor count as needed
+        // For example, send them to your server for storage
     });
 }
 
