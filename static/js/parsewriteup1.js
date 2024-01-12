@@ -24,13 +24,13 @@ function filterWriteups() {
                 var content = links[i].dataset.content.toLowerCase();
                 var writeup=loadWriteupContent(link)
                 if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
-                    links[i].parentElement.style.display = '';
+                    links[i].parentElement.style.display = 'block';
                     resultsCount++;
                 } else {
                     links[i].parentElement.style.display = 'none';
                 }
             }
-            searchResultsHeading.textContent = '';
+            searchResultsHeading.textContent = '...';
              if (links.length > 0) {
             currentWriteupUrl = links[0].href;
             loadWriteupContent(currentWriteupUrl);
