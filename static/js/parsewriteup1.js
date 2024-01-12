@@ -32,6 +32,8 @@ function filterWriteups() {
             }
            if(!! searchResultsHeading.textContent )
             searchResultsHeading.textContent = '...';
+           else
+               loadLinksFromTextFile('links.txt');
              if (links.length > 0) {
             currentWriteupUrl = links[0].href;
             loadWriteupContent(currentWriteupUrl);
