@@ -1,5 +1,12 @@
  
-
+function find()
+{
+    if(event.key === 'Enter')
+        {
+filterWriteups() ;
+      checkFlag();
+     }
+}
 
 function filterWriteups() {
             var query = document.getElementById('search-box').value.toLowerCase();
@@ -26,7 +33,7 @@ function filterWriteups() {
             currentWriteupUrl = links[0].href;
             loadWriteupContent(currentWriteupUrl);
         }
-      //  checkFlag();
+   
         }
         function loadWriteupContent(writeupUrl) {
             fetch(writeupUrl)
