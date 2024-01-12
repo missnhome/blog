@@ -1,5 +1,14 @@
-
-
+ function find(event) {
+            if (event.keyCode == 13) {
+                console.log("Enter key is pressed");
+                if(!checkflag()) 
+                filterWriteups();
+               
+                return true;
+            } else {
+                return false;
+            }
+        }
 function filterWriteups() {
             var query = document.getElementById('search-box').value.toLowerCase();
             var links = document.getElementsByClassName('writeup-link');
@@ -134,10 +143,11 @@ var tempElement = document.createElement('div');
                                 console.log('Flag:', flag+":"+userInput+":"+flag.localeCompare(userInput));
  
              if (flag.localeCompare(userInput)==0) {
-                        document.getElementById('checkflag').style.display = 'block';
+                        document.getElementById('checkflag').style.display = 'block';return true;
                     } else {
-                        document.getElementById('checkflag').style.display = 'none';
+                        document.getElementById('checkflag').style.display = 'none';return false;
                     }
+                    return false;
         }
 
         function renderMarkdown(content) {
