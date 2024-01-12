@@ -30,6 +30,7 @@ function filterWriteups() {
                     links[i].parentElement.style.display = 'none';
                 }
             }
+           if(!! searchResultsHeading.textContent )
             searchResultsHeading.textContent = '...';
              if (links.length > 0) {
             currentWriteupUrl = links[0].href;
