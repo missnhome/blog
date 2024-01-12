@@ -1,7 +1,8 @@
  
 function find()
 {
-    if(event.key === 'Enter')
+        console.log('key', event.key );
+    if(event.key == 'Enter')
         {
 filterWriteups() ;
       checkFlag();
