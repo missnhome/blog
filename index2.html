@@ -16,18 +16,19 @@
     </script>
     <div id="main-content">
 
-      
+      <input type="text" id="search-box" placeholder="writeups or tags or event or...." onkeypress="find(event)" style="width: float;">
+   <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">AIsearch</button>
     <div id="checkflag" style="display: none;">
 
    
         🎉🎊 flag is correct 🎊🎉
     </div>
 
-  <input type="text" id="search-box" placeholder="writeups or tags or event or...." onkeypress="find(event)">   
-   <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">AIsearch</button>
+
 
          </li>
         <ul class="horizontal" id="writeup-list">
+  
                                        <li><a  align="right" onclick="loadWriteupContent('https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md')">happy new year</a>
              <li><a href="https://github.com/missnhome/blog/blob/main/2023/asisctf2023">...</a></li>
              <div id="writeup-content">
