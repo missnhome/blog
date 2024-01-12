@@ -2,7 +2,7 @@
  console.log("Enter key is pressed"+event.keyCode );
             if (event.keyCode == 13) {
                 console.log("Enter key is pressed");
-                if(!checkflag()) 
+                if(!checkFlag()) 
                 filterWriteups();
                
                 return true;
