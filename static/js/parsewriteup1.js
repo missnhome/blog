@@ -1,5 +1,8 @@
 function find(event) {
     console.log("Enter key is pressed"+event.keyCode );
+    var query = document.getElementById('search-box').value.toLowerCase();
+    if(query.includes('{') || query.includes('}'))
+          return false; 
                if (event.keyCode == 13) {
                    console.log("Enter key is pressed");
                    if(!checkFlag())
@@ -181,13 +184,9 @@ return;
                link.addEventListener('click', function(event) {
                    event.preventDefault();
                    currentWriteupUrl = link.href;
-                   loadWriteupContent(currentWriteupUrl);
+ 
                });
            });
    
-           // Load the content of the first writeup on page load
-           if (writeupLinks.length > 0) {
-               currentWriteupUrl = writeupLinks[0].href;
-               loadWriteupContent(currentWriteupUrl);
-           }
+           
    
