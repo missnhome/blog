@@ -58,9 +58,10 @@ loadLinksFromTextFile('links.txt');
                            throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
                        }
                        var s=loadWriteupContent(writeupUrl);
-                       if(! s.includes('<h2>Solution Approach</h2>'))
-                            s="";
+                       if(s.includes('<h2>Solution Approach</h2>'))      
                        return s;
+             else
+                       return "";
                    })
                    .then(data => {
                        // Create a temporary element to parse the HTML content
