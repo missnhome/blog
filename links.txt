@@ -13,6 +13,10 @@ LetsWarmUp picoctf convert decimal to asci in python, https://missnhome.github.i
 tabtabattack picoctf  use tab autocomplete in linux terminal, https://missnhome.github.io/blog/2024/practice/picoctf/tabtabattack/writeup1.md
 Staticainotalwaysnoise picoctf analysis bash and elf binary files in linux, https://missnhome.github.io/blog/2024/practice/picoctf/Staticainotalwaysnoise/writeup1.md
 crackme picoctf reverse enginering and cryptography in python ,https://missnhome.github.io/blog/2024/practice/picoctf/crackme/writeup1.md
+ 2024 archive,https://github.com/missnhome/blog/2024
+nitectf 2023 archive,https://missnhome.github.io/blog/2023/nitectf2023/index.html
+asisctf 2023 archive,https://missnhome.github.io/blog/2023/asisctf2023/index.html
+
 warmedup  picoctf convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
 bufferoverflow0 picoctf2022 binary exploitation via ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
 czech-where irisctf2024 osint search on internet and google map,https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md
@@ -20,6 +24,3 @@ thejohnsons irisctf2024 reverse enginering with gidra,  https://missnhome.github
 Rune?What’sthat?  irisctf2024Golang reverse enginering work with dcimal and char, https://missnhome.github.io/blog/2024/practice/irisctf2024/runwhatsthat/writeup1.md 
 what'sMyPassword? irisctf2024  web exploitation  and sql injection vulnerability,https://missnhome.github.io/blog/2024/practice/irisctf2024/whatismypassword/writeup1.md 
 AwayOnVacation irisctf2024 osint and search in instagram,https://missnhome.github.io/blog/2024/practice/irisctf2024/awayonvacation/writeup1.md 
-irisctf 2024 archive,https://missnhome.github.io/blog/2024/irisctf/index.html
-nitectf 2023 archive,https://missnhome.github.io/blog/2023/nitectf2023/index.html
-asisctf 2023 archive,https://missnhome.github.io/blog/2023/asisctf2023/index.html
