@@ -53,8 +53,7 @@ loadLinksFromTextFile('links.txt');
                        if (!response.ok) {
                            throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
                        }
-                       if(endsWith(writeupUrl,'html'))
-                       window.location.href = writeupUrl;
+                    
                        return response.text();
                    })
                    .then(data => {
@@ -135,6 +134,8 @@ loadLinksFromTextFile('links.txt');
    
                    // Load writeup content on click
                    link.addEventListener('click', function(event) {
+   if(endsWith(this.href,'html'))
+                       window.location.href = this.href;
                        event.preventDefault();
                        loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
                    });
