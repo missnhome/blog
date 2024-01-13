@@ -1,3 +1,6 @@
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
  function find(event) {
   console.log("Enter key is pressed"+event.keyCode);
             if (event.keyCode == 13) {
@@ -170,5 +173,6 @@ var tempElement = document.createElement('div');
         // Load the content of the first writeup on page load
         if (writeupLinks.length > 0) {
             currentWriteupUrl = writeupLinks[0].href;
-            loadWriteupContent(currentWriteupUrl);
+            if(endswith( currentWriteupUrl,".html")==false)
+               loadWriteupContent(currentWriteupUrl);
         }
