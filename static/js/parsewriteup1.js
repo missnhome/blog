@@ -60,8 +60,8 @@ loadLinksFromTextFile('links.txt');
                        var s=loadWriteupContent(writeupUrl);
                           
                        return s;
-             else
-                       return "";
+            
+                       
                    })
                    .then(data => {
                        // Create a temporary element to parse the HTML content
