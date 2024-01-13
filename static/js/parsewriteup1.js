@@ -57,8 +57,8 @@ loadLinksFromTextFile('links.txt');
                        if (!response.ok) {
                            throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
                        }
-                       s=loadWriteupContent(writeupUrl);
-                       if(! s.includes('<h2>Solution Approach</h2>')
+                       var s=loadWriteupContent(writeupUrl);
+                       if(! s.includes('<h2>Solution Approach</h2>'))
                             s="";
                        return s;
                    })
