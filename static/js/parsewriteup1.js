@@ -57,8 +57,10 @@ loadLinksFromTextFile('links.txt');
                        if (!response.ok) {
                            throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
                        }
-                    
-                       return response.text();
+                       s=loadWriteupContent(writeupUrl);
+                       if s.includes('id="search-box" placeholder="Search writeups..."')
+                            s="";
+                       return s;
                    })
                    .then(data => {
                        // Create a temporary element to parse the HTML content
