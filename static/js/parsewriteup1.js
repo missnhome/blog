@@ -42,7 +42,7 @@ loadLinksFromTextFile('links.txt');
           
                 if (links.length > 0) {
                currentWriteupUrl = links[0].href;
-               if(!endsWith(currentWriteupUrl,'html'))
+               if(endsWith(currentWriteupUrl,'.md'))
                 loadWriteupContent(currentWriteupUrl);
            }
       
