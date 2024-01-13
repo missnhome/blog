@@ -33,7 +33,13 @@ function filterWriteups() {
                     links[i].parentElement.style.display = 'none';
                 }
             }
+try {
+
             searchResultsHeading.textContent = '';
+}
+catch(err) {
+  console.log(err.message);
+}
              if (links.length > 0) {
             currentWriteupUrl = links[0].href;
             loadWriteupContent(currentWriteupUrl);
@@ -85,6 +91,7 @@ function filterWriteups() {
                  updateSidebar(links);
                 })
                 .catch(error => {
+                    loadLinksFromTextFile('links.txt');
                     console.error('Error loading links:', error);
                 });
         }
