@@ -127,7 +127,7 @@ function parseLinksFromText(text) {
                 // Load writeup content on click
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
-                    if(endswith( currentWriteupUrl,".md"))
+                    if(endsWith( currentWriteupUrl,".md"))
                     loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
                        else
                        window.location.href=this.href;
@@ -176,7 +176,7 @@ var tempElement = document.createElement('div');
         // Load the content of the first writeup on page load
         if (writeupLinks.length > 0) {
             currentWriteupUrl = writeupLinks[0].href;
-            if(endswith( currentWriteupUrl,".md"))
+            if(endsWith( currentWriteupUrl,".md"))
                loadWriteupContent(currentWriteupUrl);
 
         }
