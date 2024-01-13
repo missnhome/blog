@@ -22,3 +22,4 @@ what'sMyPassword? irisctf2024  web exploitation  and sql injection vulnerability
 AwayOnVacation irisctf2024 osint and search in instagram,https://missnhome.github.io/blog/2024/practice/irisctf2024/awayonvacation/writeup1.md 
 irisctf 2024 archive,https://missnhome.github.io/blog/2024/irisctf/index.html
 nitectf 2023 archive,https://missnhome.github.io/blog/2023/nitectf2023/index.html
+asisctf 2023 archive,https://missnhome.github.io/blog/2023/asisctf2023/index.html
