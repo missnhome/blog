@@ -135,7 +135,11 @@ loadLinksFromTextFile('links.txt');
                    // Load writeup content on click
                    link.addEventListener('click', function(event) {
    if(endsWith(this.href,'html'))
-                       window.location.href = this.href;
+                       {
+window.location.href = this.href;
+return;
+}
+
                        event.preventDefault();
                        loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
                    });
