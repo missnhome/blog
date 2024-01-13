@@ -42,8 +42,8 @@ loadLinksFromTextFile('links.txt');
           
                 if (links.length > 0) {
                currentWriteupUrl = links[0].href;
-               if(endsWith(currentWriteupUrl,'.md'))
-                loadWriteupContent(currentWriteupUrl);
+              // if(endsWith(currentWriteupUrl,'.md'))
+                //loadWriteupContent(currentWriteupUrl);
            }
       
            }
@@ -58,7 +58,7 @@ loadLinksFromTextFile('links.txt');
                            throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
                        }
                        var s=loadWriteupContent(writeupUrl);
-                       if(s.includes('<h2>Solution Approach</h2>'))      
+                          
                        return s;
              else
                        return "";
