@@ -58,7 +58,7 @@ loadLinksFromTextFile('links.txt');
                            throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
                        }
                        s=loadWriteupContent(writeupUrl);
-                       if s.includes('id="search-box" placeholder="Search writeups..."')
+                       if(! s.includes('<h2>Solution Approach</h2>')
                             s="";
                        return s;
                    })
