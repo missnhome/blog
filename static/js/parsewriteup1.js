@@ -33,7 +33,7 @@ function filterWriteups() {
             searchResultsHeading.textContent = '';
              if (links.length > 0) {
             currentWriteupUrl = links[0].href;
-          //  loadWriteupContent(currentWriteupUrl);
+            loadWriteupContent(currentWriteupUrl);
         }
    
         }
@@ -167,4 +167,8 @@ var tempElement = document.createElement('div');
             });
         });
 
-       
+        // Load the content of the first writeup on page load
+        if (writeupLinks.length > 0) {
+            currentWriteupUrl = writeupLinks[0].href;
+            loadWriteupContent(currentWriteupUrl);
+        }
