@@ -6,9 +6,7 @@ function endsWith(str, suffix) {
             if (event.keyCode == 13) {
                 console.log("Enter key is pressed");
                 if(!checkFlag()) 
-                {
                 filterWriteups();
-                }
                
                 return true;
             } else {
@@ -35,13 +33,7 @@ function filterWriteups() {
                     links[i].parentElement.style.display = 'none';
                 }
             }
-try {
-
             searchResultsHeading.textContent = '';
-}
-catch(err) {
-  console.log(err.message);
-}
              if (links.length > 0) {
             currentWriteupUrl = links[0].href;
             loadWriteupContent(currentWriteupUrl);
@@ -93,7 +85,6 @@ catch(err) {
                  updateSidebar(links);
                 })
                 .catch(error => {
-                    loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
                     console.error('Error loading links:', error);
                 });
         }
@@ -136,7 +127,10 @@ function parseLinksFromText(text) {
                 // Load writeup content on click
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
+                    if(endswith( currentWriteupUrl,".md"))
                     loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
+                       else
+                       window.location.href=this.href;
                 });
             }
 
@@ -184,4 +178,5 @@ var tempElement = document.createElement('div');
             currentWriteupUrl = writeupLinks[0].href;
             if(endswith( currentWriteupUrl,".md"))
                loadWriteupContent(currentWriteupUrl);
+
         }
