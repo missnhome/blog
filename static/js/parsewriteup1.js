@@ -39,7 +39,8 @@ loadLinksFromTextFile('links.txt');
           
                 if (links.length > 0) {
                currentWriteupUrl = links[0].href;
-               loadWriteupContent(currentWriteupUrl);
+               if(!endsWith(currentWriteupUrl,'html'))
+                loadWriteupContent(currentWriteupUrl);
            }
       
            }
