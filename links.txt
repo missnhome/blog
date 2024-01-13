@@ -20,5 +20,5 @@ thejohnsons irisctf2024 reverse enginering with gidra,  https://missnhome.github
 Rune?What’sthat?  irisctf2024Golang reverse enginering work with dcimal and char, https://missnhome.github.io/blog/2024/practice/irisctf2024/runwhatsthat/writeup1.md 
 what'sMyPassword? irisctf2024  web exploitation  and sql injection vulnerability,https://missnhome.github.io/blog/2024/practice/irisctf2024/whatismypassword/writeup1.md 
 AwayOnVacation irisctf2024 osint and search in instagram,https://missnhome.github.io/blog/2024/practice/irisctf2024/awayonvacation/writeup1.md 
-irisctf 2024 archive,https://missnhome.github.io/blog/2024/practice/irisctf2024/ 
-nitectf 2023 archive,https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md    
+irisctf 2024 archive,https://missnhome.github.io/blog/2024/irisctf/index.html
+nitectf 2023 archive,https://missnhome.github.io/blog/2023/nitectf2023/index.html

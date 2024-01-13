@@ -43,12 +43,18 @@ loadLinksFromTextFile('links.txt');
            }
       
            }
+           function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
            function loadWriteupContent(writeupUrl) {
                fetch(writeupUrl)
                    .then(response => {
                        if (!response.ok) {
                            throw new Error(`Failed to fetch ${writeupUrl}. Status: ${response.status}`);
                        }
+                       if(endsWith(writeupUrl,'html'))
+                       window.location.href = writeupUrl;
                        return response.text();
                    })
                    .then(data => {
