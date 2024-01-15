@@ -3,7 +3,10 @@ function endsWith(str, suffix) {
 }
  function find(event) {
   console.log("Enter key is pressed"+event.keyCode);
+      var writeupLinks = document.querySelectorAll('.writeup-link');
+
             if (event.keyCode == 13) {
+          writeupLinks.style.display = 'block';
                 console.log("Enter key is pressed");
                 if(!checkFlag()) 
               {
@@ -13,6 +16,7 @@ function endsWith(str, suffix) {
                
                 return true;
             } else {
+         writeupLinks.style.display = 'none';
                 return false;
             }
         }
@@ -134,10 +138,13 @@ function parseLinksFromText(text) {
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
                      currentWriteupUrl=this.href;
+
                     if(endsWith( currentWriteupUrl,".md"))
                     loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
                        else
                        window.location.href=this.href;
+    var writeupLinks = document.querySelectorAll('.writeup-link');
+          writeupLinks.style.display = 'none';
                 });
             }
 
@@ -171,8 +178,7 @@ var tempElement = document.createElement('div');
         }
 
         // Attach click event listeners to each writeup link
-        var writeupLinks = document.querySelectorAll('.writeup-link');
-          writeupLinks.style.display = 'none';
+    
          currentWriteupUrl=""
         writeupLinks.forEach(function(link) {
             link.addEventListener('click', function(event) {
