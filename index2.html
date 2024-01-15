@@ -17,7 +17,7 @@
     <div id="main-content">
 
       <input type="text" id="search-box" placeholder="writeups or tags or event or...." onkeypress="find(event)" style="width: float;">
-   <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">go</button>
+
     <div id="checkflag" style="display: none;">
 
    
@@ -33,7 +33,7 @@
              <li><a href="https://github.com/missnhome/blog/blob/main/2023/asisctf2023">...</a></li>
              <div id="writeup-content">
 
-            <p>Select a writeup from the sidebar to view its content.</p>
+            <p>type writeup in searchbox and press enter or go on mobile</p>
         </div>
  
 
@@ -58,14 +58,7 @@
 
   // Example: Check if the 'query' parameter exists
   const queryExists = hasQueryParam('query');
-   if(queryExists)
-           {
-loadLinksFromTextFile('links.txt');
-
-}
-
-      else
-{         
+     
     // Load the content for a specific URL
     var specificURL = 'https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md';
     loadWriteupContent(specificURL);
