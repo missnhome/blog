@@ -33,8 +33,9 @@ function filterWriteups() {
                     links[i].parentElement.style.display = 'none';
                 }
             }
-            searchResultsHeading.textContent = '';
              if (links.length > 0) {
+            searchResultsHeading.textContent = '';
+
             currentWriteupUrl = links[0].href;
             loadWriteupContent(currentWriteupUrl);
         }
