@@ -59,7 +59,10 @@
   // Example: Check if the 'query' parameter exists
   const queryExists = hasQueryParam('query');
    if(queryExists)
-           filterWriteups();
+           {
+loadLinksFromTextFile('links.txt');
+filterWriteups();
+}
 
       else
 {         
