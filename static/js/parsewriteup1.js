@@ -171,18 +171,25 @@ var tempElement = document.createElement('div');
 
         // Attach click event listeners to each writeup link
         var writeupLinks = document.querySelectorAll('.writeup-link');
+         currentWriteupUrl=""
         writeupLinks.forEach(function(link) {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
                 currentWriteupUrl = link.href;
-                loadWriteupContent(currentWriteupUrl);
+                 if(endsWith( currentWriteupUrl,".md")) 
+                  loadWriteupContent(currentWriteupUrl);
+                else
+                                       window.location.href=this.href;
+
+
+}
             });
         });
-
+        currentWriteupUrl=""   
         // Load the content of the first writeup on page load
-        if (writeupLinks.length > 0) {
-            currentWriteupUrl = writeupLinks[0].href;
-            if(endsWith( currentWriteupUrl,".md"))
-               loadWriteupContent(currentWriteupUrl);
+      //  if (writeupLinks.length > 0) {
+       //     currentWriteupUrl = writeupLinks[0].href;
+       //     if(endsWith( currentWriteupUrl,".md"))
+         //      loadWriteupContent(currentWriteupUrl);
 
-        }
+     //   }
