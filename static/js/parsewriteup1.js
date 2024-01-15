@@ -42,7 +42,7 @@ function filterWriteups() {
 
             searchResultsHeading.textContent = '';
             currentWriteupUrl = links[0].href;
-            loadWriteupContent(currentWriteupUrl);
+            //loadWriteupContent(currentWriteupUrl);
         }
    
         }
