@@ -183,7 +183,7 @@ var tempElement = document.createElement('div');
 
 
 }
-            });
+            );
         });
         currentWriteupUrl=""   
         // Load the content of the first writeup on page load
