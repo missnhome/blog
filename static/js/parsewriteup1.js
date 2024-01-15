@@ -172,15 +172,14 @@ var tempElement = document.createElement('div');
 
         // Attach click event listeners to each writeup link
         var writeupLinks = document.querySelectorAll('.writeup-link');
+          writeupLinks.style.display = 'none';
          currentWriteupUrl=""
         writeupLinks.forEach(function(link) {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
+
                 currentWriteupUrl = link.href;
-                 if(endsWith( currentWriteupUrl,".md")) 
-                  loadWriteupContent(currentWriteupUrl);
-                else
-                                       window.location.href=this.href;
+             
 
 
 }
