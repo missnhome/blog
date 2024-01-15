@@ -5,7 +5,13 @@ function endsWith(str, suffix) {
   console.log("Enter key is pressed"+event.keyCode);
 
             if (event.keyCode == 13) {
-    document.getElementById('writeup-list').style.display = 'block';
+     var ulElement = document.getElementById("writeup-list");
+
+  // Check if the element exists before trying to hide it
+  if (ulElement) {
+    // Set the display property to "none"
+    ulElement.style.display = "block";
+  }
                 console.log("Enter key is pressed");
                 if(!checkFlag()) 
               {
@@ -15,10 +21,13 @@ function endsWith(str, suffix) {
                
                 return true;
             } else {
-    //  var writeupLinks1 =    document.getElementById('writeup-content');
+  var ulElement = document.getElementById("writeup-list");
 
-    //     writeupLinks1.style.display = 'none';
-    document.getElementById('writeup-list').style.display = 'none';
+  // Check if the element exists before trying to hide it
+  if (ulElement) {
+    // Set the display property to "none"
+    ulElement.style.display = "none";
+  }
 
                 return false;
             }
@@ -146,8 +155,13 @@ function parseLinksFromText(text) {
                     loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
                        else
                        window.location.href=this.href;
-    var writeupLinks = document.querySelectorAll('.writeup-link');
-          writeupLinks.style.display = 'none';
+  var ulElement = document.getElementById("writeup-list");
+
+  // Check if the element exists before trying to hide it
+  if (ulElement) {
+    // Set the display property to "none"
+    ulElement.style.display = "none";
+  }
                 });
             }
 
