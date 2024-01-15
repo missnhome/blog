@@ -5,9 +5,7 @@ function endsWith(str, suffix) {
   console.log("Enter key is pressed"+event.keyCode);
 
             if (event.keyCode == 13) {
-    //  var writeupLinks1 =    document.getElementById('writeup-content');
-
-          //writeupLinks1.style.display = 'block';
+    document.getElementById('search-results-heading').style.display = 'block';
                 console.log("Enter key is pressed");
                 if(!checkFlag()) 
               {
@@ -20,6 +18,8 @@ function endsWith(str, suffix) {
     //  var writeupLinks1 =    document.getElementById('writeup-content');
 
     //     writeupLinks1.style.display = 'none';
+    document.getElementById('search-results-heading').style.display = 'none';
+
                 return false;
             }
         }
