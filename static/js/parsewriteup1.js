@@ -219,10 +219,11 @@ var tempElement = document.createElement('div');
             );
         });
         currentWriteupUrl=""   
-        // Load the content of the first writeup on page load
-      //  if (writeupLinks.length > 0) {
-       //     currentWriteupUrl = writeupLinks[0].href;
-       //     if(endsWith( currentWriteupUrl,".md"))
-         //      loadWriteupContent(currentWriteupUrl);
+    //  Load the content of the first writeup on page load if have query
+if(hasQueryParam('query'))
+      if (writeupLinks.length > 0) {
+         currentWriteupUrl = writeupLinks[0].href;
+         if(endsWith( currentWriteupUrl,".md"))
+            loadWriteupContent(currentWriteupUrl);
 
-     //   }
+      }
