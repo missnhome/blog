@@ -24,7 +24,7 @@ function endsWith(str, suffix) {
                 console.log("Enter key is pressed");
                 if(!checkFlag()) 
               {
-                loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt')
+                loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
                 filterWriteups();
               }
                
