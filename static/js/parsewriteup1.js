@@ -39,7 +39,7 @@ function filterWriteups() {
 
 
              if (links.length > 0) {
-loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt')
+
             searchResultsHeading.textContent = '';
             currentWriteupUrl = links[0].href;
             loadWriteupContent(currentWriteupUrl);
