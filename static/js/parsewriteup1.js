@@ -3,9 +3,10 @@ function endsWith(str, suffix) {
 }
  function find(event) {
   console.log("Enter key is pressed"+event.keyCode);
-      var writeupLinks = document.querySelectorAll('.writeup-link');
 
             if (event.keyCode == 13) {
+      var writeupLinks = document.querySelectorAll('.writeup-link');
+
           writeupLinks.style.display = 'block';
                 console.log("Enter key is pressed");
                 if(!checkFlag()) 
@@ -16,6 +17,8 @@ function endsWith(str, suffix) {
                
                 return true;
             } else {
+      var writeupLinks = document.querySelectorAll('.writeup-link');
+
          writeupLinks.style.display = 'none';
                 return false;
             }
