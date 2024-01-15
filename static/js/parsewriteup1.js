@@ -6,7 +6,10 @@ function endsWith(str, suffix) {
             if (event.keyCode == 13) {
                 console.log("Enter key is pressed");
                 if(!checkFlag()) 
+              {
+                loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt')
                 filterWriteups();
+              }
                
                 return true;
             } else {
