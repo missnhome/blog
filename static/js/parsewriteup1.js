@@ -1,3 +1,12 @@
+function getQueryParamOrDefault(name, defaultValue) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const value = urlParams.get(name);
+    return value !== null ? value : defaultValue;
+  }
+function hasQueryParam(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.has(name);
+  }
 function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
 }
@@ -34,6 +43,7 @@ function endsWith(str, suffix) {
         }
 function filterWriteups() {
             var query = document.getElementById('search-box').value.toLowerCase();
+            query= getQueryParamOrDefault('query', query);
             var links = document.getElementsByClassName('writeup-link');
             var searchResultsHeading = document.getElementById('search-results-heading');
             var resultsCount = 0;

@@ -55,9 +55,18 @@
            window.onload = function () {
 
 
+
+  // Example: Check if the 'query' parameter exists
+  const queryExists = hasQueryParam('query');
+   if(queryExists)
+           filterWriteups();
+
+      else
+{         
     // Load the content for a specific URL
     var specificURL = 'https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md';
     loadWriteupContent(specificURL);
+}
         };
     </script>
  
