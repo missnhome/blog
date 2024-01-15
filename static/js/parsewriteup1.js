@@ -133,6 +133,7 @@ function parseLinksFromText(text) {
                 // Load writeup content on click
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
+                     currentWriteupUrl=this.href;
                     if(endsWith( currentWriteupUrl,".md"))
                     loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
                        else
