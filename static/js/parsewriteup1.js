@@ -207,6 +207,7 @@ var tempElement = document.createElement('div');
         // Attach click event listeners to each writeup link
     
          currentWriteupUrl=""
+writeupLinks=document.getElementsByClassName('writeup-link');
         writeupLinks.forEach(function(link) {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
