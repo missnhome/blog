@@ -223,6 +223,12 @@ writeupLinks=document.getElementsByClassName('writeup-link');
     //  Load the content of the first writeup on page load if have query
 if(hasQueryParam('query'))
       if (writeupLinks.length > 0) {
+   var ulElement = document.getElementById("writeup-list");
+
+  // Check if the element exists before trying to hide it
+  if (ulElement) {
+    // Set the display property to "none"
+    ulElement.style.display = "block";
          currentWriteupUrl = writeupLinks[0].href;
          if(endsWith( currentWriteupUrl,".md"))
             loadWriteupContent(currentWriteupUrl);
