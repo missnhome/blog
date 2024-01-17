@@ -440,31 +440,23 @@ var tempElement = document.createElement('div');
      
         }
         window.onload = function () {
+    let currentWriteupUrl = "";
+    const writeupLinks = document.getElementsByClassName('writeup-link');
 
-       currentWriteupUrl="";
-writeupLinks=document.getElementsByClassName('writeup-link');
+    Array.from(writeupLinks).forEach(function (link) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            currentWriteupUrl = link.href;
+            // Your logic here
+        });
+    });
 
-      writeupLinks.forEach(function(link) {
-          link.addEventListener('click', function(event) {
-              event.preventDefault();
-              currentWriteupUrl = link.href;
-          
+    currentWriteupUrl = "";
 
-
-}
-          );
-      });
-      currentWriteupUrl=""   
-  //  Load the content of the first writeup on page load if have query
-if(hasQueryParam('query'))
-{
-
-var myTextBox = document.getElementById("search-box");
-
-// Set the value of the text box
-var textToSimulate = getQueryParamOrDefault("query","");
-myTextBox.value = textToSimulate;
-
-
-  }
-        }
+    // Load the content of the first writeup on page load if you have a query
+    if (hasQueryParam('query')) {
+        const myTextBox = document.getElementById("search-box");
+        const textToSimulate = getQueryParamOrDefault("query", "");
+        myTextBox.value = textToSimulate;
+    }
+};
