@@ -443,20 +443,12 @@ var tempElement = document.createElement('div');
     let currentWriteupUrl = "";
     const writeupLinks = document.getElementsByClassName('writeup-link');
 
-    Array.from(writeupLinks).forEach(function (link) {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            currentWriteupUrl = link.href;
-            // Your logic here
-        });
-    });
-
+    
     currentWriteupUrl = "";
 
-    // Load the content of the first writeup on page load if you have a query
-    if (hasQueryParam('query')) {
+  
         const myTextBox = document.getElementById("search-box");
         const textToSimulate = getQueryParamOrDefault("query", "");
         myTextBox.value = textToSimulate;
-    }
+    
 };
