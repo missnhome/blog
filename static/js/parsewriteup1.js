@@ -208,6 +208,7 @@ var tempElement = document.createElement('div');
     
          currentWriteupUrl="";
 writeupLinks=document.getElementsByClassName('writeup-link');
+writeupLinks=Object.values(writeupLinks);
         writeupLinks.forEach(function(link) {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
