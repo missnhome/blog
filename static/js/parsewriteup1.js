@@ -222,7 +222,8 @@ writeupLinks=document.getElementsByClassName('writeup-link');
         currentWriteupUrl=""   
     //  Load the content of the first writeup on page load if have query
 if(hasQueryParam('query'))
-      if (writeupLinks.length > 0) {
+    {
+    loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
    var ulElement = document.getElementById("writeup-list");
 
   // Check if the element exists before trying to hide it
