@@ -413,7 +413,7 @@ function getQueryParamOrDefault(name, defaultValue) {
       
        
  
-          window.onload = function () {
+        
             
       let currentWriteupUrl = "";
 
@@ -428,5 +428,5 @@ function getQueryParamOrDefault(name, defaultValue) {
               
           console.log("value:"+myTextBox.value )
           
-  };
+
   
