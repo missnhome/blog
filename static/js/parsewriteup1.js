@@ -411,37 +411,22 @@ function getQueryParamOrDefault(name, defaultValue) {
                       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
               }
       
-              // Attach click event listeners to each writeup link
-      
- 
-          //  Load the content of the first writeup on page load if have query
+       
  
           window.onload = function () {
             
       let currentWriteupUrl = "";
-      const writeupLinks = document.getElementsByClassName('writeup-link');
+
   
       
-      currentWriteupUrl = "";
+
   
     
           const myTextBox = document.getElementById("search-box");
           const textToSimulate = getQueryParamOrDefault("query", "");
           myTextBox.value = textToSimulate;
               
-          currentWriteupUrl="";
-          writeupLinks=document.getElementsByClassName('writeup-link');
+          console.log("value:"+myTextBox.value )
           
-                  writeupLinks.forEach(function(link) {
-                      link.addEventListener('click', function(event) {
-                          event.preventDefault();
-                          currentWriteupUrl = link.href;
-                      
-          
-          
-          }
-                      );
-                  });
-      
   };
   
