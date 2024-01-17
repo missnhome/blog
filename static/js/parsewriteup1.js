@@ -162,7 +162,7 @@ function parseLinksFromText(text) {
                      currentWriteupUrl=this.href;
 
                     if(endsWith( currentWriteupUrl,".md"))
-                    loadWriteupContent(this.href, this.title); // Pass the full title to loadWriteupContent
+                    loadWriteupContent(this.href); // Pass the full title to loadWriteupContent
                        else
                        window.location.href=this.href;
   var ulElement = document.getElementById("writeup-list");
