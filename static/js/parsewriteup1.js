@@ -234,3 +234,5 @@ if(hasQueryParam('query'))
             loadWriteupContent(currentWriteupUrl);
 
       }
+    }
+
