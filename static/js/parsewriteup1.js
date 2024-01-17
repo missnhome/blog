@@ -208,13 +208,12 @@ var tempElement = document.createElement('div');
     
          currentWriteupUrl="";
 writeupLinks=document.getElementsByClassName('writeup-link');
-writeupLinks=Object.values(writeupLinks);
+
         writeupLinks.forEach(function(link) {
             link.addEventListener('click', function(event) {
                 event.preventDefault();
-
                 currentWriteupUrl = link.href;
-             
+            
 
 
 }
@@ -223,16 +222,32 @@ writeupLinks=Object.values(writeupLinks);
         currentWriteupUrl=""   
     //  Load the content of the first writeup on page load if have query
 if(hasQueryParam('query'))
-      if (writeupLinks.length > 0) {
-   var ulElement = document.getElementById("writeup-list");
+  {
+// Assume you have a text box with the id "myTextBox"
+var myTextBox = document.getElementById("search-box");
 
-  // Check if the element exists before trying to hide it
-  if (ulElement) {
-    // Set the display property to "none"
-    ulElement.style.display = "block";
-         currentWriteupUrl = writeupLinks[0].href;
-         if(endsWith( currentWriteupUrl,".md"))
-            loadWriteupContent(currentWriteupUrl);
+// Set the value of the text box
+var textToSimulate = getQueryParamOrDefault("query","");
+myTextBox.value = textToSimulate;
 
-      }
+// Create a new "Enter" key press event
+var enterKeyEvent = new KeyboardEvent("keydown", {
+    key: "Enter",
+    code: "Enter",
+    keyCode: 13,
+    which: 13,
+    bubbles: true,
+});
+
+// Attach an event listener to run a function when "Enter" is pressed
+myTextBox.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        // Call your function or perform actions here
+        console.log("Enter key pressed in text box");
+    }
+});
+
+// Dispatch the event to the text box
+myTextBox.dispatchEvent(enterKeyEvent);
+
     }
