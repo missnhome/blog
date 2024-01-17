@@ -222,18 +222,19 @@ writeupLinks=document.getElementsByClassName('writeup-link');
         currentWriteupUrl=""   
     //  Load the content of the first writeup on page load if have query
 if(hasQueryParam('query'))
-    {
-    loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
-   var ulElement = document.getElementById("writeup-list");
+     {
+        var ulElement = document.getElementById("writeup-list");
 
-  // Check if the element exists before trying to hide it
-  if (ulElement) {
-    // Set the display property to "none"
-    ulElement.style.display = "block";
-         currentWriteupUrl = writeupLinks[0].href;
-         if(endsWith( currentWriteupUrl,".md"))
-            loadWriteupContent(currentWriteupUrl);
-
-      }
-    }
+        // Check if the element exists before trying to hide it
+        if (ulElement) {
+          // Set the display property to "none"
+          ulElement.style.display = "block";
+        }
+                 
+                      if(!checkFlag()) 
+                    {
+                      loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
+                      filterWriteups();
+                    }
+     }
 
