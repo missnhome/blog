@@ -58,6 +58,24 @@
     // Load the content for a specific URL
     var specificURL = 'https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md';
     loadWriteupContent(specificURL);
+  const myTextBox = document.getElementById("search-box");
+          const textToSimulate = getQueryParamOrDefault("query", "");
+          myTextBox.value = textToSimulate;
+              
+          console.log("value:"+myTextBox.value )
+          
+var writeupContentElement = document.getElementById("writeup-content");
+
+// Check if the element exists
+if (writeupContentElement) {
+  // Get the inner HTML content of the element
+  var writeupContent = writeupContentElement.innerHTML;
+
+  // Log the content to the console
+  console.log(writeupContent);
+} else {
+  console.log("no content found");
+}  
         };
     </script>
  

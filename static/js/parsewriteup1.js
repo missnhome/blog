@@ -423,28 +423,4 @@ function getQueryParamOrDefault(name, defaultValue) {
         
             
  
-
-  
-      window.onload = function(){
-
-  
-    
-          const myTextBox = document.getElementById("search-box");
-          const textToSimulate = getQueryParamOrDefault("query", "");
-          myTextBox.value = textToSimulate;
-              
-          console.log("value:"+myTextBox.value )
-          
-var writeupContentElement = document.getElementById("writeup-content");
-
-// Check if the element exists
-if (writeupContentElement) {
-  // Get the inner HTML content of the element
-  var writeupContent = writeupContentElement.innerHTML;
-
-  // Log the content to the console
-  console.log(writeupContent);
-} else {
-  console.log("no content found");
-}  
-}
+ 
