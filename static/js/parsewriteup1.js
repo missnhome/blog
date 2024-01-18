@@ -428,5 +428,5 @@ function getQueryParamOrDefault(name, defaultValue) {
               
           console.log("value:"+myTextBox.value )
           
-
+          console.log(  document.getElementById("writeup-list"));
   
