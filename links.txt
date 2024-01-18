@@ -15,9 +15,10 @@ Staticainotalwaysnoise picoctf analysis bash and elf binary files in linux, http
 crackme picoctf reverse enginering and cryptography in python ,https://missnhome.github.io/blog/2024/practice/picoctf/crackme/writeup1.md
 2024 archive,https://github.com/missnhome/blog/tree/main/2024
 2023 archive,https://github.com/missnhome/blog/tree/main/2023
-
-nitectf 2023 archive,https://missnhome.github.io/blog/2023/nitectf2023/index.html
-asisctf 2023 archive,https://missnhome.github.io/blog/2023/asisctf2023/index.html
+2024 practice archive,https://github.com/missnhome/blog/tree/main/2024/practice
+2023 practice archive,https://github.com/missnhome/blog/tree/main/2023/practice
+nitectf 2023,https://missnhome.github.io/blog/2023/nitectf2023/index.html
+asisctf 2023,https://missnhome.github.io/blog/2023/asisctf2023/index.html
 
 warmedup  picoctf convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
 bufferoverflow0 picoctf2022 binary exploitation via ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
