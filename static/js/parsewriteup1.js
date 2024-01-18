@@ -227,10 +227,14 @@ function getQueryParamOrDefault(name, defaultValue) {
            var ulElement = document.getElementById("writeup-list");
       
         // Check if the element exists before trying to hide it
-        if (ulElement) {
-          // Set the display property to "none"
+         if (ulElement) {
+    // Set the display property to "none"
+    if( ulElement.style.display == "block")
+     ulElement.style.display = "none";
+   else
           ulElement.style.display = "block";
-        }
+  }
+     
                       console.log("Enter key is pressed");
                       if(!checkFlag()) 
                     {
