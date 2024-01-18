@@ -13,7 +13,7 @@ function getQueryParamOrDefault(name, defaultValue) {
   function find(event) {
   console.log("Enter key is pressed"+event.keyCode);
   
-            if (event.keyCode != 13) {
+            if (event.keyCode == 13) {
      var ulElement = document.getElementById("writeup-list");
   
   // Check if the element exists before trying to hide it
