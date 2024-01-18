@@ -71,7 +71,7 @@ function getQueryParamOrDefault(name, defaultValue) {
   var searchResultsHeading = document.getElementById('search-results-heading');
             searchResultsHeading.textContent = '';
             currentWriteupUrl = links[0].href;
-            loadWriteupContent(currentWriteupUrl);
+          //  loadWriteupContent(currentWriteupUrl);
         }
    
         }
@@ -151,6 +151,11 @@ function getQueryParamOrDefault(name, defaultValue) {
                 var writeupItem = document.createElement('li');
                 var link = document.createElement('a');
                 link.href = links[i].url;
+                if(i==0)  
+                   if(endsWith(   link.href ,".md"))
+                    loadWriteupContent(  link.href ); // Pass the full title to loadWriteupContent
+                       else
+                       window.location.href=  link.href ;
                 words= links[i].title.split(' ');
                 link.textContent =words[0]+" "+words[1] 
                 link.title = links[i].title; // Store the full title as a title attribute
