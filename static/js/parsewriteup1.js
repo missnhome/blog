@@ -19,7 +19,10 @@ function getQueryParamOrDefault(name, defaultValue) {
   // Check if the element exists before trying to hide it
   if (ulElement) {
     // Set the display property to "none"
-    ulElement.style.display = "block";
+    if( ulElement.style.display == "block")
+     ulElement.style.display = "none";
+   else
+          ulElement.style.display = "block";
   }
                 console.log("Enter key is pressed");
                 if(!checkFlag()) 
