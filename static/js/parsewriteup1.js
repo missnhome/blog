@@ -419,7 +419,9 @@ function getQueryParamOrDefault(name, defaultValue) {
               }
       
        
- 
+   // Load the content for a specific URL
+    var specificURL = 'https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md';
+    loadWriteupContent(specificURL);
         
             
  
