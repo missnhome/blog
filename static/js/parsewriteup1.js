@@ -71,7 +71,7 @@ function getQueryParamOrDefault(name, defaultValue) {
   var searchResultsHeading = document.getElementById('search-results-heading');
             searchResultsHeading.textContent = '';
             currentWriteupUrl = links[0].href;
-            //loadWriteupContent(currentWriteupUrl);
+            loadWriteupContent(currentWriteupUrl);
         }
    
         }
