@@ -61,21 +61,13 @@
   const textToSimulate = getQueryParamOrDefault("query", "");
   myTextBox.value = textToSimulate;
       
-  console.log("value:"+myTextBox.value );
-           window.onload = function () {
-var writeupContentElement = document.getElementById("writeup-content");
+if(textToSimulate!="")
+if(!checkFlag()) 
+                    {
+                      loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
+                      filterWriteups();
+                    }
 
-// Check if the element exists
-if (writeupContentElement) {
-// Get the inner HTML content of the element
-var writeupContent = writeupContentElement.innerHTML;
-
-// Log the content to the console
-console.log(writeupContent);
-} else {
-console.log("no content found");
-}  ;
-}
    
     </script>
  
