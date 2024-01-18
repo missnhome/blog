@@ -422,10 +422,10 @@ function getQueryParamOrDefault(name, defaultValue) {
  
         
             
-      let currentWriteupUrl = "";
+ 
 
   
-      
+      window.onload = function(){
 
   
     
@@ -447,3 +447,4 @@ if (writeupContentElement) {
 } else {
   console.log("no content found");
 }  
+}
