@@ -90,7 +90,7 @@ $gray: #9b9b9b;
   width: 50%;
 }
 
-.form__field {
+#search-box {
   font-family: inherit;
   width: 100%;
   border: 0;
@@ -164,7 +164,7 @@ $gray: #9b9b9b;
   color: $gray;
 }
 
-.form__field:focus {
+#search-box:focus {
   ~ .form__label {
     position: absolute;
     top: 0;
@@ -181,11 +181,11 @@ $gray: #9b9b9b;
   border-image-slice: 1;
 }
 /* reset input */
-.form__field{
+#search-box{
   &:required,&:invalid { box-shadow:none; }
 }
  
-.form__field:focus {
+#search-box:focus {
   ~ .form__label {
     position: absolute;
     top: 0;
@@ -202,7 +202,7 @@ $gray: #9b9b9b;
   border-image-slice: 1;
 }
 /* reset input */
-.form__field{
+#search-box{
   &:required,&:invalid { box-shadow:none; }
 }
  
