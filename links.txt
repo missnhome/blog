@@ -6,7 +6,7 @@ information picoctf   sample base64 with exiftool and forensics, https://missnho
 pythonwrangling picoctf  reverse and decode in python,https://missnhome.github.io/blog/2023/practice/picoctf/PythonWrangling/writeup1.md
 waveaflag picoctf  reverse on python, https://missnhome.github.io/blog/2023/practice/picoctf/waveaflag/writeup1.md
 getahead  picoctf using burpsuit and curl for head request in url and web exploitation, https://missnhome.github.io/blog/2023/practice/picoctf/getahead/writeup1.md
-happynewyear asisctf2023 copy and past flag https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.
+happynewyear asisctf2023 copy and past flag https://missnhome.github.io/blog/2023/asisctf2023/happynewyear/writeup1.md
 MatryoshkaDoll picoctf  work with nested zip and images in python , https://missnhome.github.io/blog/2023/practice/picoctf/Matryoshkadoll/writeup1.md
 Insp3ct0r picoctf work with inspect and web developer in web browser, https://missnhome.github.io/blog/2024/practice/picoctf/Insp3ct0r/writeup1.md
 LetsWarmUp picoctf convert decimal to asci in python, https://missnhome.github.io/blog/2024/practice/picoctf/LetsWarmUp/writeup1.md
@@ -17,9 +17,8 @@ crackme picoctf reverse enginering and cryptography in python ,https://missnhome
 2023 archive,https://github.com/missnhome/blog/tree/main/2023
 2024 practice archive,https://github.com/missnhome/blog/tree/main/2024/practice
 2023 practice archive,https://github.com/missnhome/blog/tree/main/2023/practice
-nitectf 2023,https://missnhome.github.io/blog/2023/nitectf2023/index.html
-asisctf 2023,https://missnhome.github.io/blog/2023/asisctf2023/index.html
-
+nitectf 2023 archive,https://missnhome.github.io/blog/2023/nitectf2023
+asisctf 2023 archive,https://missnhome.github.io/blog/2023/asisctf2023
 warmedup  picoctf convert 0x hex to decimal in python ,https://missnhome.github.io/blog/2024/practice/picoctf/warmedup/writeup1.md
 bufferoverflow0 picoctf2022 binary exploitation via ,https://missnhome.github.io/blog/2024/practice/picoctf/bufferoverflow0/writeup1.md
 czech-where irisctf2024 osint search on internet and google map,https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md
