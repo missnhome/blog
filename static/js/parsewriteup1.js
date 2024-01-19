@@ -334,6 +334,7 @@ function getQueryParamOrDefault(name, defaultValue) {
                       .then(data => {
                           var links = parseLinksFromText(data);
                        updateSidebar(links);
+                       return links;
                       })
                       .catch(error => {
                           console.error('Error loading links:', error);
