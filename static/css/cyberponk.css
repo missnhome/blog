@@ -7,7 +7,7 @@
         }
 
         h1, h2, h3 {
-            color: ##f5f542; /* cyberponk color */
+            color: #f5f542; /* cyberponk color */
         }
 
         a {
@@ -80,7 +80,7 @@
         border-color: #7aa8b7;
     }
 $primary: #11998e;
-$secondary: #ffffff;
+$secondary: #;
 $white: #fff;
 $gray: #9b9b9b;
 .form__group {
@@ -122,21 +122,21 @@ $gray: #9b9b9b;
   color: $gray;
 }
 $primary: #11998e;
-$secondary: #ffffff;
+$secondary: #f5f542;
 $white: #fff;
 $gray: #9b9b9b;
 .form__group {
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
-  width: 50%;
+  width: 100%;
 }
 
 #searchbox{
   font-family: inherit;
   width: 100%;
   border: 0;
-  border-bottom: 2px solid $gray;
+  border-bottom: 2px solid $yellow;
   outline: 0;
   font-size: 1.3rem;
   color: $white;
