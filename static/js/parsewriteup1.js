@@ -403,7 +403,7 @@ function getQueryParamOrDefault(name, defaultValue) {
               }
               function checkFlag() {
       var tempElement = document.createElement('div');
-                          tempElement.innerHTML = content;
+                          tempElement.innerHTML = "";
       
                    var flagElement = tempElement.querySelector('.flag');
       
