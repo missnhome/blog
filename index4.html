@@ -18,10 +18,7 @@
     <div id="main-content">
      <div id="main-content">
 
- 
-  <input type="input" id="search-box" placeholder="$" name="name" id='name' required /  onkeypress="find(event)" style="width: float;">
-  <label for="name" class="form__label">$type and search here</label>
- 
+      <input type="text" id="search-box" placeholder="writeups or tags(without#) or event or....(just press enter)" onkeypress="find(event)" style="width: float;">
  
     <div id="checkflag" style="display: none;">
 
@@ -64,12 +61,20 @@
   const textToSimulate = getQueryParamOrDefault("query", "");
   myTextBox.value = textToSimulate;
       
-if(textToSimulate!="")
-{
-                    s=  loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
-                     console.log("links "+s);
-                      filterWriteups();
-             
+  console.log("value:"+myTextBox.value );
+           window.onload = function () {
+var writeupContentElement = document.getElementById("writeup-content");
+
+// Check if the element exists
+if (writeupContentElement) {
+// Get the inner HTML content of the element
+var writeupContent = writeupContentElement.innerHTML;
+
+// Log the content to the console
+console.log(writeupContent);
+} else {
+console.log("no content found");
+}  ;
 }
    
     </script>
