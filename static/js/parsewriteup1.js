@@ -48,7 +48,7 @@ function getQueryParamOrDefault(name, defaultValue) {
             var query = document.getElementById('search-box').value.toLowerCase();
             query= getQueryParamOrDefault('query', query);
             var links = document.getElementsByClassName('writeup-link');
-            var searchResultsHeading = document.getElementById('search-results-heading');
+           
             var resultsCount = 0;
   
             for (var i = 0; i < links.length; i++) {
@@ -71,13 +71,8 @@ function getQueryParamOrDefault(name, defaultValue) {
   
   
              if (links.length > 0) {
-  var searchResultsHeading = document.getElementById('search-results-heading');
      
-if (searchResultsHeading !== null) {
-    searchResultsHeading.textContent = '';
-} else {
-    console.error("Element with specified ID not found");
-}
+ 
             currentWriteupUrl = links[0].href;
           //  loadWriteupContent(currentWriteupUrl);
         }
@@ -272,7 +267,7 @@ if (searchResultsHeading !== null) {
                   var query = document.getElementById('search-box').value.toLowerCase();
                   query= getQueryParamOrDefault('query', query);
                   var links = document.getElementsByClassName('writeup-link');
-                  var searchResultsHeading = document.getElementById('search-results-heading');
+             
                   var resultsCount = 0;
       
                   for (var i = 0; i < links.length; i++) {
@@ -292,12 +287,7 @@ if (searchResultsHeading !== null) {
       
       
                    if (links.length > 0) {
-var searchResultsHeading = document.getElementById('search-results-heading');
-                  if (searchResultsHeading !== null) {
-    searchResultsHeading.textContent = '';
-} else {
-    console.error("Element with specified ID not found");
-}
+
                   currentWriteupUrl = links[0].href;
                   //loadWriteupContent(currentWriteupUrl);
               }
