@@ -292,8 +292,12 @@ if (searchResultsHeading !== null) {
       
       
                    if (links.length > 0) {
-                  if(searchResultsHeading.textContent)
-                  searchResultsHeading.textContent = '';
+var searchResultsHeading = document.getElementById('search-results-heading');
+                  if (searchResultsHeading !== null) {
+    searchResultsHeading.textContent = '';
+} else {
+    console.error("Element with specified ID not found");
+}
                   currentWriteupUrl = links[0].href;
                   //loadWriteupContent(currentWriteupUrl);
               }
