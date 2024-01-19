@@ -423,8 +423,7 @@ function getQueryParamOrDefault(name, defaultValue) {
                       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
               }
       
-            var ulElement = document.getElementById("writeup-list");
-     ulElement.style.display = "none";
+        
    // Load the content for a specific URL
     var specificURL = 'https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md';
     loadWriteupContent(specificURL);
