@@ -119,7 +119,7 @@ $gray: #9b9b9b;
   display: block;
   transition: 0.2s;
   font-size: 1rem;
-  color: $gray;
+  color: $white;
 }
 $primary: #11998e;
 $secondary: #f5f542;
