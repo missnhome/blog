@@ -63,13 +63,14 @@
   const myTextBox = document.getElementById("search-box");
   const textToSimulate = getQueryParamOrDefault("query", "");
   myTextBox.value = textToSimulate;
-      
+ window.onload = function () {     
 if(textToSimulate!="")
 {
                     s=  loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
                      console.log("links "+s);
                       filterWriteups();
              
+}
 }
    
     </script>
