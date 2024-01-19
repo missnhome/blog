@@ -276,7 +276,9 @@ function getQueryParamOrDefault(name, defaultValue) {
                       var link = links[i].href.toLowerCase();
                      
                       var content = links[i].dataset.content.toLowerCase();
-                      var writeup=loadWriteupContent(link)
+                     var writeup="";
+                   if(endsWith( link,".md"))
+                       writeup=loadWriteupContent(link);
                       if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
                           links[i].parentElement.style.display = '';
                           resultsCount++;

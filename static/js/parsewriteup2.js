@@ -245,7 +245,9 @@ var tempElement = document.createElement('div');
                     var link = links[i].href.toLowerCase();
                    
                     var content = links[i].dataset.content.toLowerCase();
-                    var writeup=loadWriteupContent(link,'text')
+                      var writeup="";
+                   if(endsWith( link,".md"))
+                       writeup=loadWriteupContent(link,'text');
                     if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
                         links[i].parentElement.style.display = '';
                         resultsCount++;
