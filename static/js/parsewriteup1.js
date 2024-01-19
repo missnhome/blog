@@ -288,7 +288,7 @@ function getQueryParamOrDefault(name, defaultValue) {
       
       
                    if (links.length > 0) {
-      
+                  if(searchResultsHeading.textContent)
                   searchResultsHeading.textContent = '';
                   currentWriteupUrl = links[0].href;
                   //loadWriteupContent(currentWriteupUrl);
