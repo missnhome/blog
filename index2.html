@@ -64,7 +64,8 @@
   console.log("value:"+myTextBox.value );
            window.onload = function () {
 var writeupContentElement = document.getElementById("writeup-content");
-
+ loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
+                filterWriteups();
 // Check if the element exists
 if (writeupContentElement) {
 // Get the inner HTML content of the element

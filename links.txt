@@ -1,4 +1,4 @@
-erass nitectf2023 using cat and wget in linux,https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md    
+erass nitectf2023 using cat and wget in linux writeups1,https://missnhome.github.io/blog/2023/nitectf2023/erass/writeup1.md    
 obediantcat picoctf  in linux, https://missnhome.github.io/blog/2023/practice/picoctf/obediantcat/writeup1.md
 nicenetcat picoctf netcat in linux , https://missnhome.github.io/blog/2023/practice/picoctf/nicenetcat/writeup1.md
 mod 26 picoctf rot 13 with python, https://missnhome.github.io/blog/2023/practice/picoctf/mod26/writeup1.md
