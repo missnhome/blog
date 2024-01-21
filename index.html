@@ -72,13 +72,25 @@ if(textToSimulate!="")
          
  
 
-               var myList = document.getElementById('writeup-list"');
+               var myList = document.getElementById('writeup-list');
 
-    // Get the first li element inside the ul
-    var firstListItem = myList.getElementsByTagName('li')[0];
+  // Get the text content of the first li
+    var url = myList.getElementsByTagName('li')[0].textContent;
+console.log( myList.getElementsByTagName('li')[0])
+    // Now you can work with the URL
+    console.log(url);
+  var anchorElement = myList.getElementsByTagName('li')[0].querySelector('a');
 
-    // Now you can work with the first li element
-    console.log(firstListItem.textContent);
+    // Extract the URL from the onclick attribute
+    var onclickAttributeValue = anchorElement.getAttribute('onclick');
+    var urlMatch = onclickAttributeValue.match(/loadWriteupContent\('([^']+)'\)/);
+
+    if (urlMatch && urlMatch.length > 1) {
+      var url = urlMatch[1];
+      // Now you can work with the URL
+      console.log(url);
+loadWriteupContent(url);
+    }
 
 }
 }

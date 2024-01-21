@@ -4,39 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MISSN</title>
-    <link rel="stylesheet" href="https://missnhome.github.io/blog/static/css/missn.css" />
+ <link rel="stylesheet" href="https://missnhome.github.io/blog/static/css/cyberponk.css" />
+      
+
+ 
 </head>
- <link rel="stylesheet" href="static/css/missn.css" />
 <body>
-    <div id="sidebar">
-     <img src="https://github.com/missnhome/missn.github.io/assets/154452140/361f8110-181d-4d1d-87c0-a9f5c2197422" alt="Missn Image" width="100" height="100" align="left" >
-
-     <div id="sfcmblrphds37ax66epfdhhzwfshqc6j9ua"></div><script type="text/javascript" src="https://counter7.optistats.ovh/private/counter.js?c=mblrphds37ax66epfdhhzwfshqc6j9ua&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free website counters no ads"><img src="https://counter7.optistats.ovh/private/freecounterstat.php?c=mblrphds37ax66epfdhhzwfshqc6j9ua" border="0" title="free website counters no ads" alt="free website counters no ads"></a></noscript>
-
-        <!-- Replace the <h1> with an image -->
+  <ul class="vertical" id="archive-list" hidden></ul>
 
 
-        <input type="text" id="search-box" placeholder="Search writeups..." oninput="filterWriteups()">
-        <button class="searchbotton" onclick="loadLinksFromTextFile('links.txt')">search</button>
+    </script>
+ 
+    <div id="main-content">
+     <div id="main-content">
 
-        <h2>Archive</h2>
-          
-        <ul class="vertical" id="archive-list" hidden></ul>
-        <ul class="vertical" id="archive-list1">
-            <li><a href="https://missnhome.github.io/blog/2023/asisctf2023/">asisctf2023</a></li>
-            <li><a href="https://missnhome.github.io/blog/2023/nitectf2023">Nitectf2023</a></li>
-            <li><a href="https://missnhome.github.io/blog/2023/practice">practice</a></li>
-            <a class="comment-button" href="https://github.com/missnhome/blog/issues/1" target="_blank">Comment</a>
-            <p></p>
-            <label for="textInput">enter flag</label>
-            <input type="text" id="textInput" oninput="checkFlag(this.value)">
-            <div id="newYearEffect" style="display: none;">
-                🎉🎊 Happy New Year 2024! 🎊🎉
-            </div>
-        </ul>
+ 
+  <input type="input" id="search-box" placeholder="$" name="name" id='name' required /  onkeypress="find(event)" style="width: float;">
+  <label for="name" class="form__label">$type and search here</label>
+ 
+ 
+    <div id="checkflag" style="display: none;">
+
+   
+        🎉🎊 flag is correct 🎊🎉
     </div>
 
-    <div id="main-content">
-        <h2 id="search-results-heading">Headings</h2>
+
+
+         </li>
         <ul class="horizontal" id="writeup-list">
-            <li><a onclick="loadWriteupC
+  
+                          <li><a  onclick="loadWriteupContent('https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md')">czech-where</a></li>
+        
+             <li><a href="https://github.com/missnhome/blog/blob/main/2024/asisctf2023">...</a></li>
+             <div id="writeup-content">
+
+            <p>type writeup in searchbox and press enter or go on mobile</p>
+        </div>
+ 
+
+        </ul>
+        <div id="writeup-content">
+            <!-- Writeup content goes here -->
+            <p>find archive or tags or ctfevent or challenge after press enter or go in keyboard</p>
+        </div>
+    </div>
+<script  src="https://missnhome.github.io/blog/static/js/flag.js">
+     
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script  src="https://missnhome.github.io/blog/static/js/parsewriteup2.js">
+</script>
+ 
+ 
+<script>
+
+  
+  const myTextBox = document.getElementById("search-box");
+  const textToSimulate = getQueryParamOrDefault("query", "");
+  myTextBox.value = textToSimulate;
+ window.onload = function () {     
+if(textToSimulate!="")
+{
+                    s=  loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
+                     console.log("links "+s);
+                      filterWriteups();
+         
+ 
+
+               var myList = document.getElementById('writeup-list');
+
+  // Get the text content of the first li
+    var url = myList.getElementsByTagName('li')[0].textContent;
+console.log( myList.getElementsByTagName('li')[0])
+    // Now you can work with the URL
+    console.log(url);
+  var anchorElement = myList.getElementsByTagName('li')[0].querySelector('a');
+
+    // Extract the URL from the onclick attribute
+    var onclickAttributeValue = anchorElement.getAttribute('onclick');
+    var urlMatch = onclickAttributeValue.match(/loadWriteupContent\('([^']+)'\)/);
+
+    if (urlMatch && urlMatch.length > 1) {
+      var url = urlMatch[1];
+      // Now you can work with the URL
+      console.log(url);
+loadWriteupContent(url);
+    }
+
+}
+}
+   
+    </script>
+ 
+        </ul>
+    </div>
+</html>
