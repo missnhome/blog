@@ -70,11 +70,15 @@ if(textToSimulate!="")
                      console.log("links "+s);
                       filterWriteups();
          
-       const writeupslist = document.querySelector("#writeup-list");
+ 
 
-             console.log("writeups "+writeupslist);
+               var myList = document.getElementById('writeup-list"');
 
-             console.log("writeups "+writeupslist.get(0));
+    // Get the first li element inside the ul
+    var firstListItem = myList.getElementsByTagName('li')[0];
+
+    // Now you can work with the first li element
+    console.log(firstListItem.textContent);
 
 }
 }
