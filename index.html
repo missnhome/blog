@@ -58,42 +58,83 @@
  
  
 <script>
-
-  
-  const myTextBox = document.getElementById("search-box");
-  const textToSimulate = getQueryParamOrDefault("query", "");
-  myTextBox.value = textToSimulate;
- window.onload = function () {     
-if(textToSimulate!="")
-{
-                    s=  loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
-                     console.log("links "+s);
-                      filterWriteups();
-         
- 
-
-               var myList = document.getElementById('writeup-list');
-
-  // Get the text content of the first li
-    var url = myList.getElementsByTagName('li')[0].textContent;
-console.log( myList.getElementsByTagName('li')[0])
-    // Now you can work with the URL
-    console.log(url);
-  var anchorElement = myList.getElementsByTagName('li')[0].querySelector('a');
-
-    // Extract the URL from the onclick attribute
-    var onclickAttributeValue = anchorElement.getAttribute('onclick');
-    var urlMatch = onclickAttributeValue.match(/loadWriteupContent\('([^']+)'\)/);
-
-    if (urlMatch && urlMatch.length > 1) {
-      var url = urlMatch[1];
-      // Now you can work with the URL
-      console.log(url);
-loadWriteupContent(url);
+  function extractUrlFromOnclick(onclickAttributeValue) {
+      var urlMatch = onclickAttributeValue.match(/loadWriteupContent\('([^']+)'\)/);
+      return urlMatch && urlMatch.length > 1 ? urlMatch[1] : null;
     }
 
+    // Function to handle changes in the content
+    function handleContentChange(mutationsList, observer) {
+      mutationsList.forEach((mutation) => {
+        if (mutation.type === 'childList') {
+          // Get the first <a> element inside the first <li> after content change
+          var firstLink = myList.querySelector('li:first-child a');
+
+          if (firstLink) {
+            // Extract the URL from the onclick attribute
+            var onclickAttributeValue = firstLink.getAttribute('onclick');
+            var url = extractUrlFromOnclick(onclickAttributeValue);
+
+            if (url) {
+              // Now you can work with the URL
+              console.log(url);
+            }
+          }
+        }
+      });
+    }
+  
+  const myTextBox = document.getElementById("search-box");
+ const textToSimulate = getQueryParamOrDefault("query", "");
+myTextBox.value = textToSimulate;
+
+window.onload = function () {
+  if (textToSimulate !== "") {
+    // Load links from text file and filter writeups
+    var s = loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
+    filterWriteups();
+
+    // Get the reference to the ul element
+    var myList = document.getElementById('writeup-list');
+
+    // Example: Simulate a content change (replace this with your actual content update logic)
+    setTimeout(function () {
+      // Assuming your myList content is changed here
+     // myList.innerHTML = '<li><a onclick="loadWriteupContent(\'https://example.com\')">Link 1</a></li>' +
+                         '<li><a onclick="loadWriteupContent(\'https://example.org\')">Link 2</a></li>' +
+                         '<li><a onclick="loadWriteupContent(\'https://example.net\')">Link 3</a></li>';
+
+      // Get the URL of the first link after content change
+      getFirstLinkUrl();
+    }, 2000);
+  }
+};
+
+// Function to extract the URL from the onclick attribute
+function extractUrlFromOnclick(onclickAttributeValue) {
+  var urlMatch = onclickAttributeValue.match(/loadWriteupContent\('([^']+)'\)/);
+  return urlMatch && urlMatch.length > 1 ? urlMatch[1] : null;
 }
+
+// Function to get the URL of the first link in myList
+function getFirstLinkUrl() {
+  var myList = document.getElementById('writeup-list');
+  var firstLink = myList.querySelector('li a');
+
+  if (firstLink) {
+    // Extract the URL from the onclick attribute
+    var onclickAttributeValue = firstLink.getAttribute('onclick');
+    var url = extractUrlFromOnclick(onclickAttributeValue);
+
+    if (url) {
+      // Now you can work with the URL
+      console.log(url);
+    }
+  }
 }
+
+ 
+
    
     </script>
  
