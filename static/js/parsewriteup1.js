@@ -64,6 +64,8 @@ function getQueryParamOrDefault(name, defaultValue) {
                 if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
                     links[i].parentElement.style.display = '';
                     resultsCount++;
+                    if (resultsCount==1)
+                          loadWriteupContent(link);
                 } else {
                     links[i].parentElement.style.display = 'none';
                 }
@@ -271,7 +273,7 @@ async function getMarkdownFileContent(fileUrl) {
 
     if (response.ok) {
       // Assuming you want to log or use the content
-      console.log(content);
+       
       return content;
     } else {
       console.error(`Error: ${response.statusText}`);
@@ -288,7 +290,7 @@ async function getMarkdownFileContent(fileUrl) {
                   var links = document.getElementsByClassName('writeup-link');
              
                   var resultsCount = 0;
-      
+     
                   for (var i = 0; i < links.length; i++) {
                       var title = links[i].textContent.toLowerCase();
                       var truncatedTitle = links[i].title.toLowerCase();
@@ -296,10 +298,12 @@ async function getMarkdownFileContent(fileUrl) {
                       var content = links[i].dataset.content.toLowerCase();
                      var writeup="";
                    if(endsWith( link,".md"))
+                     
                        writeup=getMarkdownFileContent(link);
                       if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
                           links[i].parentElement.style.display = '';
                           resultsCount++;
+                        
                       } else {
                           links[i].parentElement.style.display = 'none';
                       }
