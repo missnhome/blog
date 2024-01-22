@@ -73,6 +73,7 @@
           if (firstLink) {
             // Extract the URL from the onclick attribute
             var onclickAttributeValue = firstLink.getAttribute('onclick');
+            console.log(onclickAttributeValue);      
             var url = extractUrlFromOnclick(onclickAttributeValue);
 
             if (url) {
@@ -124,6 +125,7 @@ function getFirstLinkUrl() {
   if (firstLink) {
     // Extract the URL from the onclick attribute
     var onclickAttributeValue = firstLink.getAttribute('onclick');
+console.log(onclickAttributeValue);
     var url = extractUrlFromOnclick(onclickAttributeValue);
 
     if (url) {
