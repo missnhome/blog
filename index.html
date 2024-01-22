@@ -58,6 +58,7 @@
  
  
 <script>
+  
   function extractUrlFromOnclick(onclickAttributeValue) {
       var urlMatch = onclickAttributeValue.match(/loadWriteupContent\('([^']+)'\)/);
       return urlMatch && urlMatch.length > 1 ? urlMatch[1] : null;
@@ -101,13 +102,14 @@ window.onload = function () {
     // Example: Simulate a content change (replace this with your actual content update logic)
     setTimeout(function () {
       // Assuming your myList content is changed here
-     // myList.innerHTML = '<li><a onclick="loadWriteupContent(\'https://example.com\')">Link 1</a></li>' +
+          url1=getFirstLinkUrl();
+          console.log("url"+url1);
+     myList.innerHTML = '<li><a onclick="loadWriteupContent(\''+url1+')">Link 1</a></li>' +
                          '<li><a onclick="loadWriteupContent(\'https://example.org\')">Link 2</a></li>' +
                          '<li><a onclick="loadWriteupContent(\'https://example.net\')">Link 3</a></li>';
 
-      // Get the URL of the first link after content change
-      getFirstLinkUrl();
-    }, 20000);
+     
+    }, 2000);
   }
 };
 
@@ -132,13 +134,15 @@ console.log(onclickAttributeValue);
 
     if (url) {
       // Now you can work with the URL
-      console.log(url);
+      console.log("url1"+url);
+      return url; 
     }
   }
 }
 
  
 
+    
    
     </script>
  
