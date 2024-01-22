@@ -71,7 +71,7 @@
       mutationsList.forEach((mutation) => {
         if (mutation.type === 'childList') {
           // Get the first <a> element inside the first <li> after content change
-          var firstLink = myList.querySelector('li:first-child a');
+          var firstLink = myList.querySelector('li a');
 
           if (firstLink) {
             // Extract the URL from the onclick attribute
