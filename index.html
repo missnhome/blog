@@ -76,12 +76,12 @@
           if (firstLink) {
             // Extract the URL from the onclick attribute
             var onclickAttributeValue = firstLink.getAttribute('onclick');
-            console.log(onclickAttributeValue);      
+            console.log("url2"+onclickAttributeValue);      
             var url = extractUrlFromOnclick(onclickAttributeValue);
 
             if (url) {
               // Now you can work with the URL
-              console.log(url);
+              console.log("url1"+url);
             }
           }
         }
