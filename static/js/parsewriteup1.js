@@ -54,7 +54,7 @@ function getQueryParamOrDefault(name, defaultValue) {
             for (var i = 0; i < links.length; i++) {
                 var title = links[i].textContent.toLowerCase();
                 var truncatedTitle = links[i].title.toLowerCase();
-                var link = links[i].href.toLowerCase();
+                var link = links[i].href;
                
                 var content = links[i].dataset.content.toLowerCase();
                  var writeup="";
@@ -273,8 +273,7 @@ function getQueryParamOrDefault(name, defaultValue) {
                   for (var i = 0; i < links.length; i++) {
                       var title = links[i].textContent.toLowerCase();
                       var truncatedTitle = links[i].title.toLowerCase();
-                      var link = links[i].href.toLowerCase();
-                     
+                      var link = links[i].href;
                       var content = links[i].dataset.content.toLowerCase();
                      var writeup="";
                    if(endsWith( link,".md"))
