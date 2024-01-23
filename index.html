@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,8 +97,8 @@ window.onload = function () {
   if (textToSimulate !== "") {
     // Load links from text file and filter writeups
     var s = loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
-    filterWriteups();
-
+    links=filterWriteups();
+     console.log("links"+links);
     // Get the reference to the ul element
     var myList = document.getElementById('writeup-list');
              url=  getFirstLinkUrl();   
