@@ -64,8 +64,7 @@ function getQueryParamOrDefault(name, defaultValue) {
                 if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
                     links[i].parentElement.style.display = '';
                     resultsCount++;
-                    if (resultsCount==1)
-                          loadWriteupContent(link);
+                  
                 } else {
                     links[i].parentElement.style.display = 'none';
                 }
@@ -76,7 +75,7 @@ function getQueryParamOrDefault(name, defaultValue) {
      
  
             currentWriteupUrl = links[0].href;
-     loadWriteupContent(document.createElement('writeup-link'));
+
         }
    return links;
         }
