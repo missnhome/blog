@@ -76,7 +76,7 @@ function getQueryParamOrDefault(name, defaultValue) {
      
  
             currentWriteupUrl = links[0].href;
-     loadWriteupContent(document.createElement('writeup-list'));
+     loadWriteupContent(document.createElement('writeup-link'));
         }
    return links;
         }
