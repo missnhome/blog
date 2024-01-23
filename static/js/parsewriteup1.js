@@ -59,7 +59,7 @@ function getQueryParamOrDefault(name, defaultValue) {
                 var content = links[i].dataset.content.toLowerCase();
                  var writeup="";
                if(endsWith( link,".md"))
-                   writeup=loadWriteupContent(link);
+                   writeup= renderMarkdown(link);
             
                 if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
                     links[i].parentElement.style.display = '';
@@ -266,24 +266,7 @@ function getQueryParamOrDefault(name, defaultValue) {
                       return false;
                   }
               }
-async function getMarkdownFileContent(fileUrl) {
-  try {
-    const response = await fetch(fileUrl);
-    const content = await response.text();
 
-    if (response.ok) {
-      // Assuming you want to log or use the content
-       
-      return content;
-    } else {
-      console.error(`Error: ${response.statusText}`);
-      return null;
-    }
-  } catch (error) {
-    console.error('Error fetching data:', error.message);
-    return null;
-  }
-}
       function filterWriteups() {
                   var query = document.getElementById('search-box').value.toLowerCase();
                   query= getQueryParamOrDefault('query', query);
@@ -299,7 +282,7 @@ async function getMarkdownFileContent(fileUrl) {
                      var writeup="";
                    if(endsWith( link,".md"))
                      
-                       writeup=getMarkdownFileContent(link);
+                       writeup=renderMarkdown(link);
                       if (title.includes(query) || truncatedTitle.includes(query) || link.includes(query) || content.includes(query)) {
                           links[i].parentElement.style.display = '';
                           resultsCount++;
