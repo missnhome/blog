@@ -94,6 +94,8 @@
 myTextBox.value = textToSimulate;
 
 window.onload = function () {
+  textToSimulate = getQueryParamOrDefault("query", "");
+
   if (textToSimulate !== "") {
     // Load links from text file and filter writeups
     var s = loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
