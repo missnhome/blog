@@ -35,7 +35,7 @@
 
         #writeup-content {
             padding: 20px;
-            background-color: #2a2a2a; /* Darker background color for writeup content */
+            background-color: #000000;
             border-radius: 5px;
         }
            ul.horizontal {
