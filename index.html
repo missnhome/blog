@@ -90,11 +90,11 @@
     }
   
   const myTextBox = document.getElementById("search-box");
-   textToSimulate = getQueryParamOrDefault("query", "");
+   textToSimulate = getQueryParamOrDefault("q", "");
 myTextBox.value = textToSimulate;
 
 window.onload = function () {
-  textToSimulate = getQueryParamOrDefault("query", "");
+  textToSimulate = getQueryParamOrDefault("q", "");
 
   if (textToSimulate !== "") {
     // Load links from text file and filter writeups

@@ -46,7 +46,7 @@ function getQueryParamOrDefault(name, defaultValue) {
         }
   function filterWriteups() {
             var query = document.getElementById('search-box').value.toLowerCase();
-            query= getQueryParamOrDefault('query', query);
+            query= getQueryParamOrDefault('q', query);
             var links = document.getElementsByClassName('writeup-link');
            
             var resultsCount = 0;
@@ -268,7 +268,7 @@ function getQueryParamOrDefault(name, defaultValue) {
 
       function filterWriteups() {
                   var query = document.getElementById('search-box').value.toLowerCase();
-                  query= getQueryParamOrDefault('query', query);
+                  query= getQueryParamOrDefault('q', query);
                   var links = document.getElementsByClassName('writeup-link');
              
                   var resultsCount = 0;
