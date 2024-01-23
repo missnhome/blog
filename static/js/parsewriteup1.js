@@ -159,14 +159,14 @@ function getQueryParamOrDefault(name, defaultValue) {
                 link.href = links[i].url;
                 if(i==0)  
                    if(endsWith(   link.href ,".md"))
-                    loadWriteupContent(  link.href ); // Pass the full title to loadWriteupContent
+                        link.dataset.content = renderMarkdown(link.herf); 
                        else
                        window.location.href=  link.href ;
                 words= links[i].title.split(' ');
                 link.textContent =words[0]+" "+words[1] 
                 link.title = links[i].title; // Store the full title as a title attribute
                 link.classList.add('writeup-link'); // Add the 'writeup-link' class
-                link.dataset.content = renderMarkdown(link.herf); // Placeholder for content, update this dynamically if needed
+            
                 writeupItem.appendChild(link);
                 writeupList.appendChild(writeupItem);
   
@@ -434,10 +434,10 @@ function getQueryParamOrDefault(name, defaultValue) {
               }
       
         
-   // Load the content for a specific URL
-    var specificURL = 'https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md';
-    loadWriteupContent(specificURL);
+ 
+
         
-            
+                var specificURL = 'https://missnhome.github.io/blog/2024/irisctf/czech-where/writeup1.md';
+    loadWriteupContent(specificURL);
  
  
