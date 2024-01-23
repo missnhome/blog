@@ -101,10 +101,10 @@ window.onload = function () {
     var s = loadLinksFromTextFile('https://missnhome.github.io/blog/links.txt');
     links=filterWriteups();
 var arr = Array.prototype.slice.call( links );
+    var myList = document.getElementById('writeup-list');
 
      console.log("links"+myList);
     // Get the reference to the ul element
-    var myList = document.getElementById('writeup-list');
              url=  getFirstLinkUrl();   
            console.log("log:"+url);
   }
