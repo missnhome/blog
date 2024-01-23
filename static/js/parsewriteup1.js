@@ -166,7 +166,7 @@ function getQueryParamOrDefault(name, defaultValue) {
                 link.textContent =words[0]+" "+words[1] 
                 link.title = links[i].title; // Store the full title as a title attribute
                 link.classList.add('writeup-link'); // Add the 'writeup-link' class
-                link.dataset.content = ''; // Placeholder for content, update this dynamically if needed
+                link.dataset.content = renderMarkdown(link.herf); // Placeholder for content, update this dynamically if needed
                 writeupItem.appendChild(link);
                 writeupList.appendChild(writeupItem);
   
